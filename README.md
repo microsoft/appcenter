@@ -1,4 +1,6 @@
-# App Center
+# Overview
+Welcome to the primary repository for [Visual Studio App Center](https://appcenter.ms). Here you'll find a list of active opensource repositories our team contributes to, monthly iteration plans with key changes we plan to make and issues containing active discussions around new features and bugs in the service.
+
 
 # Repositories
 
@@ -37,20 +39,6 @@
 | VSTS App Center Test           | [(source)](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/AppCenterTestV1)       |
 | VSTS App Center Distribute     | [(source)](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/AppCenterDistributeV1) |
 | Fastlane App Center Distribute | [(source)](https://github.com/Microsoft/fastlane-plugin-appcenter)                          |
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 # Legal Notices
 
