@@ -1,8 +1,8 @@
 ---
 name: Change request
 about: Create a change request to help us improve
-title: ''
-labels: ''
+title: "[Change]"
+labels: change-request
 assignees: ''
 
 ---
