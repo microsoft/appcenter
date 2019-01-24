@@ -1,8 +1,7 @@
+> **For detailed information about the purpose of this repository refer to the [Wiki](https://github.com/Microsoft/appcenter/wiki)**
+
 # Overview
 Welcome to the primary repository for [Visual Studio App Center](https://appcenter.ms). Here you'll find a list of active opensource repositories our team contributes to, monthly iteration plans with key changes we plan to make and issues containing active discussions around new features and bugs in the service.
-
-**For detailed information about the purpose of this repository refer to the [Wiki](https://github.com/Microsoft/appcenter/wiki)**
-
 
 # Repositories
 
