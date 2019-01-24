@@ -3,48 +3,11 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 
 # Contents
 
-1. [Planning Process](https://github.com/Microsoft/appcenter/wiki/Planning)
-2. [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap)
-3. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iterations)
-4. [Wiki](https://github.com/Microsoft/appcenter/wiki)
-
-# Repositories
-
-## Tools
-
-| Name                 | Links     |
-| -------------------- |-----------|
-| CLI                  | [(source)](https://github.com/Microsoft/appcenter-cli)         |
-| VS Code Extension    | [(source)](https://github.com/Microsoft/vscode-appcenter)      |
-
-## SDK
-
-| Name            | Links     |
-| --------------- |-----------|
-| Android         | [(source)](https://github.com/Microsoft/AppCenter-SDK-Android)      |
-| Apple           | [(source)](https://github.com/Microsoft/AppCenter-SDK-Apple)        |
-| Cordova         | [(source)](https://github.com/Microsoft/appcenter-sdk-cordova)      |
-| React Native    | [(source)](https://github.com/Microsoft/appcenter-sdk-react-native) |
-| Unity           | [(source)](https://github.com/Microsoft/AppCenter-SDK-Unity)        |
-| UWP             | [(source)](https://github.com/Microsoft/AppCenter-SDK-DotNet)       |
-| Xamarin         | [(source)](https://github.com/Microsoft/AppCenter-SDK-DotNet)      |
-
-## Sample Applications
-
-| Name            | Links     |
-| --------------- |-----------|
-| Android         | [(source)](https://github.com/Microsoft/appcenter-sampleapp-android)      |
-| Apple           | [(source)](https://github.com/Microsoft/appcenter-sampleapp-ios-swift)    |
-| React Native    | [(source)](https://github.com/Microsoft/appcenter-sampleapp-react-native) |
-| Xamarin         | [(source)](https://github.com/Microsoft/appcenter-sampleapp-xamarin)      |
-
-
-## Integrations
-| Name                           | Links        |
-| ------------------------------ |--------------|
-| VSTS App Center Test           | [(source)](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/AppCenterTestV1)       |
-| VSTS App Center Distribute     | [(source)](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/AppCenterDistributeV1) |
-| Fastlane App Center Distribute | [(source)](https://github.com/Microsoft/fastlane-plugin-appcenter)                          |
+1. [Wiki](https://github.com/Microsoft/appcenter/wiki)
+2. [Planning Process](https://github.com/Microsoft/appcenter/wiki/Planning)
+3. [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap)
+4. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iterations)
+5. [Repositories](https://github.com/Microsoft/appcenter/wiki/Repositories)
 
 # Legal Notices
 
