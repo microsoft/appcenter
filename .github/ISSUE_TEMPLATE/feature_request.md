@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest a new feature for us to add to App Center
 title: "[Feature]"
 labels: feature-request
 assignees: ''

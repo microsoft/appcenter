@@ -1,6 +1,6 @@
 ---
 name: Change request
-about: Create a report to help us improve
+about: Create a change request to help us improve
 title: ''
 labels: ''
 assignees: ''
