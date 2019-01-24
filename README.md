@@ -22,7 +22,7 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 | React Native    | [(source)](https://github.com/Microsoft/appcenter-sdk-react-native) |
 | Unity           | [(source)](https://github.com/Microsoft/AppCenter-SDK-Unity)        |
 | UWP             | [(source)](https://github.com/Microsoft/AppCenter-SDK-DotNet)       |
-| Xamarin         | [(source)](https://github.com/Microsoft/AppCenter-SDK-Xamarin)      |
+| Xamarin         | [(source)](https://github.com/Microsoft/AppCenter-SDK-DotNet)      |
 
 ## Sample Applications
 
