@@ -1,6 +1,6 @@
 ---
 name: Change request
-about: Create a change request to help us improve
+about: Propose a change to exist functionality
 title: "[Change]"
 labels: change-request
 assignees: ''
