@@ -6,7 +6,7 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 1. [Wiki](https://github.com/Microsoft/appcenter/wiki)
 2. [Planning Process](https://github.com/Microsoft/appcenter/wiki/Planning)
 3. [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap)
-4. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iterations)
+4. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iteration-plans)
 5. [Repositories](https://github.com/Microsoft/appcenter/wiki/Repositories)
 
 # Legal Notices
