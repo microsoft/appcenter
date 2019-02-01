@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Report a problem
-title: ''
+title: "[Bug]"
 labels: bug
-assignees: ''
+assignees: joemellin, patniko
 
 ---
 
