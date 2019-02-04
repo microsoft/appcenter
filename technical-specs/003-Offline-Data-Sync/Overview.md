@@ -14,7 +14,7 @@ Additional features we plan on implementing following the initial release:
 - Conflict Resolution
 - Advanced Queries
 
-For security, we're implementing a token exchange service. This will allow an exchange of an app secret plus an optional AAD B2C token for a CosmosDB resource token. This service is responsible for validating app secrets, validating AAD B2C tokems, creating CosmosDB users (for each AAD B2C user), associating default permissions for each CosmosDB user, and caching and returning resource tokens. This will eventually be tightly coupled with our [Identity Service](https://github.com/Microsoft/appcenter/pull/16) in order to give better access control, permissions, and other identity functionality in correlation with Data Sync. 
+For security, we're implementing a token exchange service. This will allow an exchange of an app secret plus an optional AAD B2C token for a CosmosDB resource token. This service is responsible for validating app secrets, validating AAD B2C tokens, creating CosmosDB users (for each AAD B2C user), associating default permissions for each CosmosDB user, and caching and returning resource tokens. This will eventually be tightly coupled with our [Identity Service](https://github.com/Microsoft/appcenter/pull/16) in order to give better access control, permissions, and other identity functionality in correlation with Data Sync. 
 
 We have decided to prioritize the following platforms:
 
