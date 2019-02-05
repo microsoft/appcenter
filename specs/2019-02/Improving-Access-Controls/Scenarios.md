@@ -53,6 +53,10 @@ Custom roles will include the ability to include or exclude access to a specific
   2. Can configure identity tenant
   3. Can delete identity tenant
   4. Can view user details
+  
+# GDPR
+  1. Can submit DSR delete requests
+  2. Can submit DSR export requests 
 
 ## Teams
 With an existing `Team` structure already in place the assumption is this serves as a logical fit for security group management.
