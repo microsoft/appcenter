@@ -1,11 +1,14 @@
 ---
 name: Bug report
 about: Report a problem
-title: "[Bug]"
+title: ''
 labels: bug
 assignees: patniko
 
 ---
+
+**What App Center service does this affect?**
+Name of service or sdk with the issue.
 
 **Describe the bug**
 A clear and concise description of what the bug is.

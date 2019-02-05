@@ -1,7 +1,7 @@
 ---
 name: Change request
 about: Propose a change to existing functionality
-title: "[Change]"
+title: ''
 labels: change request
 assignees: ''
 
