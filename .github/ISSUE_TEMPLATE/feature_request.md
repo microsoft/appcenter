@@ -7,9 +7,6 @@ assignees: ''
 
 ---
 
-**What App Center service does this feature apply to?**
-What specific area is affected by the solution.
-
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
 
