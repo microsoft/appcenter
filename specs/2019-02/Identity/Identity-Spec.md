@@ -44,10 +44,10 @@ User experience:
 - Lupita is an app developer who wants to connect her existing Azure subscription to the App Center Identity service. 
 - She goes into the App Center Identity service, and she sees a button to “Connect to Azure subscription”. 
 - If: 
-  - She already has one or more Azure subscription(s) connected,  
-    - A panel pops up and she selects which the Azure subscription to connect her app to 
-  - Else, she is directed a panel “Add an Azure subscription”, she chooses her subscription and clicks “Connect” 
-    - If she does not have an Azure Subscription, she is prompted to “Create a subscription” and is redirected to the Azure portal to create a subscription 
+  - She already has one or more Azure subscription(s) connected to her App Center account,  
+    - A panel pops up and she selects which Azure subscription to connect her app to 
+  - Else, she is clicks on "+ Add subscription", and she chooses which Azure subscription to connect to and clicks “Connect” 
+    - If she does not have an Azure Subscription, she clicks on “Create a subscription” and is redirected to the Azure portal to create a subscription 
 - A panel appears for her to input the domain name and choose the country/region to provision the AD B2C tenant/resource. Then, she clicks “Create”. 
   - The domain name is pre-filled with {app-name}.
   - The default for country/region is “United States”. 
@@ -98,24 +98,27 @@ User Experience:
 User Experience: 
 - Sofia is app developer who wants to configure a sign in and sign up user experience for her app users.  
 - She goes to the App Center Identity service, and clicks on the tab “User Flows”. 
-- She is able to choose from the six types of default user flows that App Center Identity provides: Sign up and Sign in, Profile editing, Password reset, Sign-up, Sign-in, and Sign in using ROPC. 
+- She is able to choose from the four types of default user flows that App Center Identity provides: Sign up and Sign in, Password reset, Sign-up, and Sign-in. 
 - For each of the user flows, she can: 
   - Select the Identity Providers that she has already configured. If she has no Identity Providers configured, she will see an empty state reminding her to configure the providers. 
   - Choose to toggle multi-factor authentication on or off. 
   - If she has email/password set up, there will be an additional box for her to toggle her settings for “Password complexity”. 
   - She will have the option to configure the “Advanced settings” in the Azure portal.
+  - Clicking on each user flow, she can choose to customize her UI by toggling `on` for `Custom page layout` and inserting a URL where her custom UI exists.
 
     ![Designs for "As an app developer, I can set up and edit the user flows for my identity provider."](./images/scenario5.png)
 
-#### 6. As an app developer, I can see a list and search for the app users authenticated to the app.
+#### 6. As an app developer, I view a list and search for the app users authenticated to the app.
 
 User Experience: 
 
-- As an app developer, I can see a list of app users who have authenticated to my app or are usres under my Azure AD B2C tenant. If I’d like to have more granular control over the users, I will edit the users in Azure.
+- As an app developer, I can see a list of app users who have authenticated to my app or are users under my Azure AD B2C tenant. If I’d like to have more granular control over the users, I will edit the users in Azure.
 - On the main page under “Users”, I will be able to search for the users based on email, and first name and last name.
 - When I click on each of the users, I see their basic profile. To have more granular control over the editing of the users, I am directed to Azure.
 
 #### 7. As an app developer, the changes or API calls I make in/to the Azure AD B2C portal is similarly captured in the App Center Identity portal and pushed to the config file of the app. 
+
+Any changes that the app developer makes in App Center Identity will be reflected in Azure AD B2C, and vice versa.
 
 #### 8. As an app developer, I am able to use my app user’s identity to integrate with other App Center services. 
 
