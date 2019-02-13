@@ -1,0 +1,37 @@
+{
+  "name": "appcenter-github-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "probot run ./index.js",
+    "debug": "node --inspect-brk -- node_modules/.bin/probot run ./index.js",
+    "test": "jest && standard"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^14.0.0",
+    "newrelic": "^5.2.1",
+    "probot": "7.3.1",
+    "probot-config": "^0.1.0",
+    "probot-scheduler": "^1.0.2"
+  },
+  "engines": {
+    "node": "^8.9",
+    "npm": "^5.6"
+  },
+  "devDependencies": {
+    "jest": "^22.2.2",
+    "smee-client": "^1.0.1",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
