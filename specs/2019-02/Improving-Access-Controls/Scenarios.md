@@ -20,7 +20,7 @@ Teams exist within the context of an Organization, and a single organization can
 * Managers can manage app settings, collaborators, and integrations
 * Developers can manage app services (e.g. create builds, run tests)
 * Testers can install apps they are distribution group members of
-* Viewers access is limited to a read-only state for app data
+* Viewers access is limited to a read-only state for all app data
 
 # Goals
 
