@@ -55,7 +55,7 @@ User experience:
   - Use cases for Identity integration with other App Center services 
 - Lupita lands on the “Getting Started” page where she is taken through sequential steps on how to integrate App Center’s Identity SDK with her app
 
-    ![Designs for "As an app developer, I can provision an Identity service (i.e. Azure AD B2C) for my app"](./images/scenario1.png)
+    ![Designs for "As an app developer, I can provision an Identity service (i.e. Azure AD B2C) for my app"](./images/scenario1.PNG)
 
 #### 2. As an app developer, I can connect my app to an existing Identity service.
 
@@ -67,7 +67,7 @@ User experience:
   - He is also given the option to “Create a new subscription” or “Create a new Identity tenant”.
 - Helmut lands on the “Getting Started” page where he is taken through sequential steps on how to integrate App Center’s Identity SDK with his app.
 
-    ![Designs for "As an app developer, I can connect my app to an existing Identity service"](./images/scenario2.png)
+    ![Designs for "As an app developer, I can connect my app to an existing Identity service"](./images/scenario2.PNG)
 
 #### 3. As an app developer, I am able to have a delightful App Center Identity SDK UI experience. 
 
@@ -91,7 +91,7 @@ User Experience:
 - He goes to the App Center Identity service, and clicks on the tab “Identity Providers”, and is presented with the option to configure email/password, or third-party identity providers Google, Facebook, or Microsoft.  
 - He chooses to configure Facebook as an Identity Provider. He clicks on the row “Facebook” and is prompted to enter his “Client ID” and “Client Secret”, and clicks “Done” when completed. 
 
-    ![Designs for "As an app developer, I can set up as my identity providers Google, Facebook, Microsoft, and email/password."](./images/scenario4.png)
+    ![Designs for "As an app developer, I can set up as my identity providers Google, Facebook, Microsoft, and email/password."](./images/scenario4.PNG)
 
 #### 5. As an app developer, I can set up and edit the user flows for my identity provider.
 
