@@ -188,6 +188,4 @@ public interface DataSyncError {
 
 # Mockups
 
-1. Connect and provision services **Work in Progress**
-2. View utilization metrics **Work in Progress**
-3. Browse document collections **Work in Progress**
+1. View utilization metrics **Work in Progress**
