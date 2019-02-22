@@ -47,18 +47,18 @@ Additional platforms that we will target in the future:
 
     - I can link to an existing Azure subscription and create a new CosmosDB resource.
 
-   ![Designs for "As a developer, I can provision a CosmosDB instance for storing my app data and specify the resource name and location of my resource"](./images/scenario1.png)
+   ![Designs for "As a developer, I can provision a CosmosDB instance for storing my app data and specify the resource name and location of my resource"](./images/Scenario1.png)
 
 #### 2. As a developer, I can specify my CosmosDB database ID, collection ID, and RU (throughput) when setting up a CosmosDB resource in the App Center Portal
 
     - Directly from the App Center portal, i'm able to configure my CosmosDB instance
 
-   ![Designs for "As an app developer, I can specify my CosmosDB database ID, collection ID, and RU (throughput) when setting up a CosmosDB resource in the App Center Portal"](./images/scenario2.png)
+   ![Designs for "As an app developer, I can specify my CosmosDB database ID, collection ID, and RU (throughput) when setting up a CosmosDB resource in the App Center Portal"](./images/Scenario2.png)
 
 #### 3. As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage
 
     - I can connect to an existing Azure subscription and my CosmosDB resource. Please note that you will only be able to connect if the CosmosDB resource has the Core(SQL) api.
-   ![Designs for "As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage"](./images/scenario3.png)
+   ![Designs for "As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage"](./images/Scenario3.png)
 
 #### 4. As a developer, I can easily navigate to the Azure CosmosDB resource from the App Center portal to view and edit my app data
 
@@ -66,7 +66,7 @@ Additional platforms that we will target in the future:
 
     - I can browse through collections and documents
     - I can filter documents by user identifier using AAD B2C
-   ![Designs for "As a developer, I can view my app data in the App Center portal"](./images/scenario4.png)
+   ![Designs for "As a developer, I can view my app data in the App Center portal"](./images/Scenario4.png)
 
 #### 6.As a developer, I can perform CRUD operations on my app data using the App Center Data Sync SDK and the App Center Portal
 
@@ -79,7 +79,7 @@ Additional platforms that we will target in the future:
 
     - I can upload a single json document or an array of documents
     - I can pick whether this document is public or private
-   ![Designs for "As a developer, I can upload JSON files to the App Center portal in order to add them to my collection"](./images/scenario5.png)
+   ![Designs for "As a developer, I can upload JSON files to the App Center portal in order to add them to my collection"](./images/Scenario5.png)
 
 #### 9. As a developer, I can query and display my app data in the portal
 
