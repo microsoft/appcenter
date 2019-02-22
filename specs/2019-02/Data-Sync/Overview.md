@@ -1,4 +1,4 @@
-# Offline Data Sync Overview
+# Data Sync Overview
 
 The service will initially be an online-first (with basic offline capabilities) method to persist app data in the cloud built on top of CosmosDB. Our core functionality will include:
 
@@ -45,45 +45,45 @@ Additional platforms that we will target in the future:
 
 #### 1. As a developer, I can provision a CosmosDB instance for storing my app data and specify the resource name and location of my resource
 
-    - I can link to an existing Azure subscription and create a new CosmosDB resource.
+   - I can link to an existing Azure subscription and create a new CosmosDB resource.
 
    ![Designs for "As a developer, I can provision a CosmosDB instance for storing my app data and specify the resource name and location of my resource"](./images/Scenario1.png)
 
 #### 2. As a developer, I can specify my CosmosDB database ID, collection ID, and RU (throughput) when setting up a CosmosDB resource in the App Center Portal
 
-    - Directly from the App Center portal, i'm able to configure my CosmosDB instance
+   - Directly from the App Center portal, i'm able to configure my CosmosDB instance
 
    ![Designs for "As an app developer, I can specify my CosmosDB database ID, collection ID, and RU (throughput) when setting up a CosmosDB resource in the App Center Portal"](./images/Scenario2.png)
 
 #### 3. As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage
 
-    - I can connect to an existing Azure subscription and my CosmosDB resource. Please note that you will only be able to connect if the CosmosDB resource has the Core(SQL) api.
+   - I can connect to an existing Azure subscription and my CosmosDB resource. Please note that you will only be able to connect if the CosmosDB resource has the Core(SQL) api.
    ![Designs for "As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage"](./images/Scenario3.png)
 
 #### 4. As a developer, I can easily navigate to the Azure CosmosDB resource from the App Center portal to view and edit my app data
 
 #### 5. As a developer, I can view my app data in the App Center portal
 
-    - I can browse through collections and documents
-    - I can filter documents by user identifier using AAD B2C
+   - I can browse through collections and documents
+   - I can filter documents by user identifier using AAD B2C
    ![Designs for "As a developer, I can view my app data in the App Center portal"](./images/Scenario4.png)
 
 #### 6.As a developer, I can perform CRUD operations on my app data using the App Center Data Sync SDK and the App Center Portal
 
-    - I can create, get/read, update, and delete documents
-    - I can delete an entire collection and all the documents in it
+   - I can create, get/read, update, and delete documents
+   - I can delete an entire collection and all the documents in it
 
 #### 7. As a developer, I can perform read operations on my global/shared settings in the App Center Data Sync SDK and CRUD operations through the App Center portal
 
 #### 8. As a developer, I can upload JSON files to the App Center portal in order to add them to my collection
 
-    - I can upload a single json document or an array of documents
-    - I can pick whether this document is public or private
+   - I can upload a single json document or an array of documents
+   - I can pick whether this document is public or private
    ![Designs for "As a developer, I can upload JSON files to the App Center portal in order to add them to my collection"](./images/Scenario5.png)
 
 #### 9. As a developer, I can query and display my app data in the portal
 
-    - I can perform simple queries to filter data and display it
+   - I can perform simple queries to filter data and display it
 
 ## SDK Signatures
 
