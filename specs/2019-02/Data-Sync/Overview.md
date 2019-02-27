@@ -13,7 +13,9 @@ The service will initially be an online-first (with basic offline capabilities) 
 - On device caching for offline data persistance (i.e. Store and Forward)
 - The ability to view utilization metrics in the App Center Portal 
 
-## Offline capabilities 
+
+
+### Offline capabilities 
 
 For our MVP, we will have a basic "Store and Forward" implementation, which will be expanded on in the future. 
 
@@ -21,13 +23,18 @@ For our MVP, we will have a basic "Store and Forward" implementation, which will
 
 **Writes:** Last write wins (no conflict resolution call back for now). Writes are persisted immediately if online and later if offline. A global hook can be defined to no be notified when documents are actually persisted remotely.  We plan on implementing a conflict resolution callback for this in the future. 
 
-Additional features we plan on implementing following the initial release:
+In regards to caching, our current plan involves implementing an on-device caching system. Likely SQLite dedicated file/database for Data Storage. 
 
-- A more enhanced offline data persistence experience
-- Real-time updates, expanding on our current functionality of updates starting on app start, on resume, or when the developer manually syncs
-- Consent Removal, giving developers a more robust flow capable of Configuring CosmosDB view/edit permissions for App Center users
+We'll be introducing a per-document Time-To-Live (TTL) setting for reads and writes. TTL controls whether or not a document should be cached and for how long. 
+
+We don't currently have plans to enforce a size limit. 
+
+
+### Security 
 
 For security, we're implementing a token exchange service. This will allow an exchange of an app secret plus an optional AAD B2C token for a CosmosDB resource token. This service is responsible for validating app secrets, validating AAD B2C tokens, creating CosmosDB users (for each AAD B2C user), associating default permissions for each CosmosDB user, and caching and returning resource tokens. This will eventually be tightly coupled with our [Identity Service](https://github.com/Microsoft/appcenter/pull/16) in order to give better access control, permissions, and other identity functionality in correlation with Data Sync. 
+
+### Platform Support 
 
 We have decided to prioritize the following platforms:
 
@@ -40,6 +47,14 @@ Additional platforms that we will target in the future:
 - React Native
 - .NET Core
 - JavaScript (browser)
+
+### Going Forward 
+
+Additional features we plan on implementing following the initial release:
+
+- A more enhanced offline data persistence experience
+- Real-time updates, expanding on our current functionality of updates starting on app start, on resume, or when the developer manually syncs
+- Consent Removal, giving developers a more robust flow capable of Configuring CosmosDB view/edit permissions for App Center users
 
 ## MVP User Scenarios
 
