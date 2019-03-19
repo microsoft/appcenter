@@ -16,7 +16,10 @@ This plan details the proposed improvements for App Center’s Windows offering 
 
 ### Analytics 
 
-- Analytics SDK for UWP apps and all of it’s functionalities listed [here.](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+- Analytics SDK for UWP apps and all of it’s functionalities listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+
+### Build
+- Build support for UWP apps
 
 ## Planned Improvements 
 
@@ -80,6 +83,7 @@ Our team is considering support other features including, but not limited to the
 - Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
 - Distribution, analytics and crash reporting for .NET Core 3 [(#53)](https://github.com/Microsoft/appcenter/issues/53)
 - Distribution, analytics and crash reporting for WinForms 
+- Build support for WPF apps [(#85)](https://github.com/Microsoft/appcenter/issues/85)
 
  Please give existing feature request a +1 or create a new request specifying the Windows platform to help our team better prioritize.  
  
@@ -89,3 +93,4 @@ Our team is considering support other features including, but not limited to the
 - [App Center Windows Diagnostics documentation](https://docs.microsoft.com/en-us/appcenter/diagnostics/windows-support)
 - [App Center Distribution documentation](https://docs.microsoft.com/en-us/appcenter/distribution/)
 - [App Center Analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/) 
+
