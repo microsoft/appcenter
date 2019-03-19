@@ -59,7 +59,7 @@ Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverligh
 | WinForms | (Open Source)    | None | Stretch goal |
 | Win32 | None | None | None |
 
-Analytics 
+### Analytics 
 
 Note: HockeyApp has user & event tracking in it’s analytics today. Full support in App Center means having a working App Center Analytics SDK with the full capabilities listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/). 
 
