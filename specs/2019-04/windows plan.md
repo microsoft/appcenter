@@ -30,7 +30,7 @@ This plan details the proposed improvements for App Center’s Windows offering 
 
 - Official support for WPF applications 
  
-Note: this does not include in app updates through App Center.  
+> Note: this does not include in app updates through App Center.  
 ### Analytics
 - Analytics SDK for WPF apps and all of it’s functionalities as listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/).  
 
