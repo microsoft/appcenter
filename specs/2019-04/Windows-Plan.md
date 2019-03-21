@@ -1,9 +1,9 @@
-# App Center Window’s Proposal 
+# App Center Windows Application Proposal 
 
-This plan details the proposed improvements for App Center’s Windows offering along with a comparison of App Center and HockeyApp. This is work in progress and will be iterated upon based on any internal updates and feedback from the community. We expect to start work on the planned items in the second quarter of 2019. 
+This plan details the proposed improvements for App Center’s Windows application offering along with a comparison of App Center and HockeyApp. This is work in progress and will be iterated upon based on any internal updates and feedback from the community. We expect to start work on the planned items in the second quarter of 2019. 
 
 
-## App Center’s current Windows Offering 
+## App Center’s Current Offering 
 ### Diagnostics
 
 - Crash reporting for UWP (.NET native) apps distributed through the Windows store 
@@ -12,7 +12,7 @@ This plan details the proposed improvements for App Center’s Windows offering 
 ### Distribution
 
 - Distributing UWP and Unity UWP apps using the APPX or MSIX package format
-- Unofficial support for distributing WPF (.NET Framework) applications 
+- Unofficial support to distribute WPF and WinForms apps when packaged as APPX/MSIX using the [Windows Application Packaging]( Project
 
 ### Analytics 
 
@@ -35,7 +35,7 @@ This plan details the proposed improvements for App Center’s Windows offering 
  
 > Note: this does not include in app updates through App Center.  
 ### Analytics
-- Analytics SDK for WPF apps and all of its functionalities as listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+- Analytics SDK for WPF (.NET Framework) apps and all of its functionalities as listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
@@ -79,7 +79,7 @@ Note: HockeyApp has user & event tracking in it’s analytics today. Full suppor
 
 Our team is considering support other features including, but not limited to the following: 
 
-- Distributing Windows apps using .AppInstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
+- Distributing Windows apps using .appinstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
 - Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
 - Distribution, analytics and crash reporting for .NET Core 3 [(#53)](https://github.com/Microsoft/appcenter/issues/53)
 - Distribution, analytics and crash reporting for WinForms 
