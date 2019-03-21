@@ -12,7 +12,7 @@ This plan details the proposed improvements for App Center’s Windows applicati
 ### Distribution
 
 - Distributing UWP and Unity UWP apps using the APPX or MSIX package format
-- Unofficial support to distribute WPF and WinForms apps when packaged as APPX/MSIX using the [Windows Application Packaging]( Project
+- Unofficial support to distribute WPF and WinForms apps when packaged as APPX/MSIX using the [Windows Application Packaging](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
 
 ### Analytics 
 
