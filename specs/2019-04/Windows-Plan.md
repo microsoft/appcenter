@@ -11,12 +11,12 @@ This plan details the proposed improvements for App Center’s Windows offering 
 
 ### Distribution
 
-- Distributing UWP and Unity UWP apps 
+- Distributing UWP and Unity UWP apps using the APPX or MSIX package format
 - Unofficial support for distributing WPF (.NET Framework) applications 
 
 ### Analytics 
 
-- Analytics SDK for UWP apps and all of it’s functionalities listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+- Analytics SDK for UWP apps and all of its functionalities listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
 
 ### Build
 - Build support for UWP apps
@@ -35,11 +35,11 @@ This plan details the proposed improvements for App Center’s Windows offering 
  
 > Note: this does not include in app updates through App Center.  
 ### Analytics
-- Analytics SDK for WPF apps and all of it’s functionalities as listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+- Analytics SDK for WPF apps and all of its functionalities as listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
-Note: “full support” means supporting all App Center crashes features as indicated [here](https://docs.microsoft.com/en-us/appcenter/diagnostics/features), not including handled exceptions and custom key value pairs.  
+Note: “full support” means supporting all App Center crashes features as indicated in App Center's [diagnostics documenation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features), not including handled exceptions and custom key value pairs.  
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
@@ -64,7 +64,7 @@ Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverligh
 
 ### Analytics 
 
-Note: HockeyApp has user & event tracking in it’s analytics today. Full support in App Center means having a working App Center Analytics SDK with the full capabilities listed [here](https://docs.microsoft.com/en-us/appcenter/analytics/). 
+Note: HockeyApp has user & event tracking in it’s analytics today. Full support in App Center means having a working App Center Analytics SDK with the full capabilities listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/). 
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
