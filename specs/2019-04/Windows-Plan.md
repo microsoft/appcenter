@@ -81,7 +81,7 @@ Our team is considering support other features including, but not limited to the
 
 - Distributing Windows apps using .appinstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
 - Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
-- Distribution, analytics and crash reporting for .NET Core 3 [(#53)](https://github.com/Microsoft/appcenter/issues/53)
+- Distribution, analytics and crash reporting for .NET Core 3. This will include Console, WinForms and WPF apps. [(#53)](https://github.com/Microsoft/appcenter/issues/53)
 - Distribution, analytics and crash reporting for WinForms 
 - Build support for WPF apps [(#85)](https://github.com/Microsoft/appcenter/issues/85)
 
