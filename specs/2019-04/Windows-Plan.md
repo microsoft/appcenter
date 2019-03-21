@@ -25,9 +25,8 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ### Diagnostics 
 
-- Crash reporting capabilities for store and sideloaded UWP and WPF apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our documentation.  
-
-> Note: this does not include handled exceptions and custom properties.  
+- Crash and error reporting capabilities for store and sideloaded UWP (.NET Native) and WPF (.NET Framework) apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our documentation.  
+ 
 
 ### Distribution 
 
@@ -39,7 +38,8 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
-Note: “full support” means supporting all App Center crashes features as indicated in App Center's [diagnostics documenation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features), not including handled exceptions and custom key value pairs.  
+Note: “full support” means supporting all App Center diagnostics features as indicated in App Center's [diagnostics documenation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).
+
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
@@ -80,7 +80,6 @@ Note: HockeyApp has user & event tracking in it’s analytics today. Full suppor
 Our team is considering support other features including, but not limited to the following: 
 
 - Distributing Windows apps using .appinstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
-- Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
 - Distribution, analytics and crash reporting for .NET Core 3. This will include Console, WinForms and WPF apps. [(#53)](https://github.com/Microsoft/appcenter/issues/53)
 - Distribution, analytics and crash reporting for WinForms 
 - Build support for WPF apps [(#85)](https://github.com/Microsoft/appcenter/issues/85)
