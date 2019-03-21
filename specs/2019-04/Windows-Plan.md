@@ -38,7 +38,7 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
-Note: “full support” means supporting all App Center diagnostics features as indicated in App Center's [diagnostics documenation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).
+Note: “full support” means supporting all App Center diagnostics features as indicated in App Center's [diagnostics documentaion](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).
 
 
 |    | HockeyApp | App Center Today | Proposal | 
@@ -52,7 +52,7 @@ Note: “full support” means supporting all App Center diagnostics features as
 
 ### Distribution  
 
-Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverlight applications. App Center will consider supporting this scenario for distributing Windows apps using the .AppInstaller file (#52) 
+Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverlight applications. App Center will consider supporting this scenario for distributing Windows apps using the .appInstaller file [#52](https://github.com/Microsoft/appcenter/issues/52)
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
