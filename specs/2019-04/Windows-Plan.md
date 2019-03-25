@@ -12,7 +12,7 @@ This plan details the proposed improvements for App Center’s Windows applicati
 ### Distribution
 
 - Distributing UWP and Unity UWP apps using the APPX or MSIX package format
-- Unofficial support to distribute WPF and WinForms apps when packaged as APPX/MSIX using the [Windows Application Packaging](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- Unofficial support to distribute WPF and WinForms apps when packaged as APPX or MSIX using the [Windows Application Packaging](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
 
 ### Analytics 
 
@@ -25,7 +25,9 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ### Diagnostics 
 
-- Crash and error reporting capabilities for store and sideloaded UWP (.NET Native) and WPF (.NET Framework) apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our documentation.  
+- Crash reporting capabilities for store and sideloaded UWP (.NET Native) and WPF (.NET Framework) apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our [documentation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).  
+
+> Note: this does not include handled exceptions and [custom properties](https://docs.microsoft.com/en-us/appcenter/diagnostics/features#key-value-pairs).  
  
 
 ### Distribution 
@@ -38,7 +40,7 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
-Note: “full support” means supporting all App Center diagnostics features as indicated in App Center's [diagnostics documentaion](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).
+Note: “full support” means supporting all App Center crashes features as indicated in App Center's [diagnostics documentation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features), not including handled exceptions and custom properties. 
 
 
 |    | HockeyApp | App Center Today | Proposal | 
@@ -52,7 +54,7 @@ Note: “full support” means supporting all App Center diagnostics features as
 
 ### Distribution  
 
-Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverlight applications. App Center will consider supporting this scenario for distributing Windows apps using the .appInstaller file [#52](https://github.com/Microsoft/appcenter/issues/52)
+Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverlight applications. App Center will consider supporting these scenarios for distributing Windows apps using the .appInstaller file [#52](https://github.com/Microsoft/appcenter/issues/52)
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
@@ -79,6 +81,7 @@ Note: HockeyApp has user & event tracking in it’s analytics today. Full suppor
 
 Our team is considering support other features including, but not limited to the following: 
 
+- Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
 - Distributing Windows apps using .appinstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
 - Distribution, analytics and crash reporting for .NET Core 3. This will include Console, WinForms and WPF apps. [(#53)](https://github.com/Microsoft/appcenter/issues/53)
 - Distribution, analytics and crash reporting for WinForms 
