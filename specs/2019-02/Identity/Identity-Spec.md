@@ -74,7 +74,7 @@ User experience:
 User Experience: 
 
 - Yolanda has a great app idea to allow her app users to log their fitness activity with their fitness trackers. She would like to get started on the app and track the identity of her users via third-party identity providers. 
-- She integrates the App Center Identity SDK and calls appcenter.login() and is provided with a UI that allows her app users to login via third-party identity providers {Google, Facebook, or Microsoft} or email/password. 
+- She integrates the App Center Identity SDK and calls appcenter.signIn() and is provided with a UI that allows her app users to login via third-party identity providers {Google, Facebook, or Microsoft} or email/password. 
   - The UI also allows her to sign up for an account, and this requires the app user to type in their email address and password.  
 - Once done,  
   - The user is directed to the URL that Yolanda sets, and the app user can start using her app.
@@ -93,20 +93,19 @@ User Experience:
 
     ![Designs for "As an app developer, I can set up as my identity providers Google, Facebook, Microsoft, and email/password."](./images/scenario4.PNG)
 
-#### 5. As an app developer, I can set up and edit the user flows for my identity provider.
+#### 5. As an app developer, I can edit the user flows for my identity provider.
 
 User Experience: 
 - Sofia is app developer who wants to configure a sign in and sign up user experience for her app users.  
 - She goes to the App Center Identity service, and clicks on the tab “User Flows”. 
-- She is able to choose from the four types of default user flows that App Center Identity provides: Sign up and Sign in, Password reset, Sign-up, and Sign-in. 
+- She can edit the user flow settings. 
 - For each of the user flows, she can: 
   - Select the Identity Providers that she has already configured. If she has no Identity Providers configured, she will see an empty state reminding her to configure the providers. 
   - Choose to toggle multi-factor authentication on or off. 
   - If she has email/password set up, there will be an additional box for her to toggle her settings for “Password complexity”. 
-  - She will have the option to configure the “Advanced settings” in the Azure portal.
   - Clicking on each user flow, she can choose to customize her UI by toggling `on` for `Custom page layout` and inserting a URL where her custom UI exists.
 
-    ![Designs for "As an app developer, I can set up and edit the user flows for my identity provider."](./images/scenario5.png)
+    ![Designs for "As an app developer, I can edit the user flows for my identity provider."](./images/scenario5.png)
 
 #### 6. As an app developer, I view a list and search for the app users authenticated to the app.
 
@@ -116,7 +115,9 @@ User Experience:
 - On the main page under “Users”, I will be able to search for the users based on email, and first name and last name.
 - When I click on each of the users, I see their basic profile. To have more granular control over the editing of the users, I am directed to Azure.
 
-#### 7. As an app developer, the changes or API calls I make in/to the Azure AD B2C portal is similarly captured in the App Center Identity portal and pushed to the config file of the app. 
+    ![Designs for "As an app developer, I view a list and search for the app users authenticated to the app."](./images/scenario6.png)
+
+#### 7. As an app developer, the changes or API calls I make in/to the Azure AD B2C portal is similarly captured in the App Center Identity portal. 
 
 Any changes that the app developer makes in App Center Identity will be reflected in Azure AD B2C, and vice versa.
 
