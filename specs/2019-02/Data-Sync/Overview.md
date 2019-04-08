@@ -1,20 +1,40 @@
-# Offline Data Sync Overview
+# Data Sync Overview
 
-The service will initially be an online-first method to persist app data in the cloud built on top of CosmosDB. Our core functionality will include:
+The Data Sync MVP service will initially provide basic functionality to persist app data in the cloud. This service will be built on top of Cosmos DB. Our core functionality will include:
 
-- The ability to provision or connect to a CosmosDB instance to store app data with an Azure subscription (Core SQL protocol only)
-- The ability to perform CRUD operations on app data (documents) with our native SDKs
-    - A Document can either be Public (and read only) or Private (and read-write by a single authenticated user)
-- The ability to perform simple queries on stored data using the SDKs
-- An Management UI within the App Center portal, enabling CRUD access to app data (documents)
+- The ability to provision or connect to a Cosmos DB instance to store app data with an Azure subscription (Core SQL protocol only)
+- The ability to create two types of documents (all documents exist in a single collection for now):
+  - Public (and read only)
+  - Private (and read-write by a single authenticated user via AAD B2C)
+- The ability to perform Read operations on global/shared settings with our native SDKs
+- The ability to perform CRUD operations on user data with our native SDKs
+- The ability to perform CRUD operations on global/shared settings through the App Center UI
+- The ability to perform CRUD operations on User data through the App Center UI
+- On device caching for offline data persistance (i.e. Store and Forward)
+- The ability to view utilization metrics in the App Center Portal
 
-Additional features we plan on implementing following the initial release:
+In addition to the core functionality, our MVP will also have event listeners, which will wait for an event to occur and programmatically react to to an input or signal.
 
-- Offline data persistence
-- Conflict Resolution
-- Advanced Queries
+### Offline capabilities 
 
-For security, we're implementing a token exchange service. This will allow an exchange of an app secret plus an optional AAD B2C token for a CosmosDB resource token. This service is responsible for validating app secrets, validating AAD B2C tokens, creating CosmosDB users (for each AAD B2C user), associating default permissions for each CosmosDB user, and caching and returning resource tokens. This will eventually be tightly coupled with our [Identity Service](https://github.com/Microsoft/appcenter/pull/16) in order to give better access control, permissions, and other identity functionality in correlation with Data Sync. 
+For our MVP, we will have a basic "Store and Forward" implementation, which will be expanded on in the future to include conflict resolution callbacks, which will enable developers to define logic and behavior in the case of a conflict.
+
+**Reads:** Guaranteed to get latest cached document if offline, and throws an error otherwise
+
+**Writes:** Last write wins (no conflict resolution callback for now). Writes are persisted immediately if online and later if offline. A global hook can be defined to no be notified when documents are actually persisted remotely.  We plan on implementing a conflict resolution callback for this in the future.
+
+In regards to caching, our current plan involves implementing an on-device caching system.  It will be a SQLite dedicated file/database for Data Storage. The service will have two tables for caching documents. One per application for app documents and one per application, per user, for user documents.
+
+We'll be introducing a per-document Time-To-Live (TTL) setting for reads and writes. TTL controls whether or not a document should be cached and for how long.
+
+We don't currently have plans to enforce a size limit.
+
+
+### Security
+
+For security, we're implementing a token exchange service. This will allow an exchange of an app secret plus an optional AAD B2C token for a Cosmos DB resource token. This service is responsible for validating app secrets, validating AAD B2C tokens, creating Cosmos DB users (for each AAD B2C user), associating default permissions for each Cosmos DB user, and caching and returning resource tokens. This will eventually be tightly coupled with our [Identity Service](https://github.com/Microsoft/appcenter/pull/16) in order to give better access control, permissions, and other identity functionality in correlation with Data Sync.
+
+### Platform Support
 
 We have decided to prioritize the following platforms:
 
@@ -27,148 +47,51 @@ Additional platforms that we will target in the future:
 - React Native
 - .NET Core
 - JavaScript (browser)
-- macOS
-- Universal Windows Platform (UWP)
+
+### Going Forward
+
+Additional features we plan on implementing following the initial release:
+
+- A more enhanced data persistence experience, including a conflict resolution callbacks for both online and offline scenarios.
+- Shared documents between authenticated users.
+- Support for multiple collections
+- Real-time updates, expanding on our current functionality of updates starting on app start, on resume, or when the developer manually syncs.
+- Consent Removal, giving developers a more robust flow capable of Configuring Cosmos DB view/edit permissions for App Center users
 
 ## MVP User Scenarios
 
-#### 1. As a developer, I can provision a CosmosDB instance for storing my app data
+#### 1. As a developer, I can provision a Cosmos DB instance for storing my app data 
 
-    - I can link to an existing Azure subscription and create a new CosmosDB resource.
-    - I can change the default name of the collection when setting it up for the first time
+- I can link to an existing Azure subscription and create a new Cosmos DB resource. I can specify the Database name and location of the data through a dropdown menu. After doing so, i'm able to select which tier of data i'm going to use. We recommend starting with the "Getting Started" tier to get an understanding of basic usage/pricing and how [Cosmos DB RUs](https://docs.microsoft.com/azure/cosmos-db/request-units) work.
 
-#### 2. As a developer, I can connect or disconnect my app to an existing Cosmos database for data storage
+![Designs for "As a developer, I can provision a Cosmos DB instance for storing my app data and specify the resource name and location of my resource"](./images/Scenario1_1.png)
 
-    - I can connect to an existing Azure subscription and my CosmosDB resource. Please note that you will only be able to connect if the CosmosDB resource has the Core(SQL) api.
+#### 2. As a developer, I can connect an existing Cosmos DB database for use with the Data Sync service
 
-#### 3. As a developer, I can specify my CosmosDB account name, location of my resource, RU (throughput) when setting up a CosmosDB resource in the App Center Portal
+- Directly from the App Center portal, i'm able to connect an existing Cosmos DB instance via Azure subscription. By connecting my Azure subscription to my app, I can select a database and existing collection I would like to connect my app to.
 
-    - Directly from the App Center portal, i'm able to configure my CosmosDB instance
+![Designs for "As an app developer, I can connect an existing Cosmos DB instance for use with the Data Sync service"](./images/Scenario2_1.png)
 
-#### 4. As a developer, I can easily navigate to the Azure CosmosDB resource from the App Center portal to view and edit my app data
+- Directly from the App Center portal, i'm able to connect an existing Cosmos DB instance through via connection string. Instead of opting to use your Azure subscription, I can insert my database connection string and specify my database and existing collection I would like to connect my app to.
 
-#### 5.As a developer, I can perform CRUD operations on my app data using the App Center Data Sync SDK and the App Center Portal
+![Designs for "As an app developer, i'm able to connect an existing Cosmos DB instance through via connection string"](./images/Scenario2_2.png)
 
-    - I can create, get/read, update, and delete documents
-    - I can delete an entire collection and all the documents in it
+#### 3. As a developer, I can  disconnect my app from a connected Cosmos DB database for with the Data Sync service
 
-#### 6. As a developer, I can view my app data in the App Center portal
+#### 4. As a developer, I can easily navigate to the Azure Cosmos DB resource from the App Center portal to view and edit my app data
 
-    - I can browse through collections and documents
-    - I can filter documents by user identifier using AAD B2C
+- I can easily context switch from the App Center to the Cosmos DB database in the Azure portal using the "Open in Azure" button located in the App Center portal.
 
-#### 7. As a developer, I can upload JSON files to the App Center portal in order to add them to my collection
+#### 5.As a developer, I can view and perform CRUD operations on my app data using the App Center Data Sync SDK and the App Center Portal
 
-    - I can upload a single json document or an array of documents
-    - I can pick whether this document is public or private
+- I can view all of my app data in a list view
+- I can create, get/read, update, and delete documents
+- I can delete an entire collection and all the documents in it
 
-#### 8. As a developer, I can query and display my app data in the portal
+![Designs for "As an app developer, I can view and perform CRUD operations on my app data using the App Center Data Sync SDK and the App Center Portal"](./images/Scenario3_1.png)
 
-    - I can perform simple queries to filter data and display it
+#### 6. As a developer, I can perform read operations on my global/shared settings in the App Center Data Sync SDK and CRUD operations through the App Center portal
 
-## SDK Signatures
-
-```java
-package com.microsoft.appcenter.datasync;
-
-// App Center DataSync module
-public class DataSync {
-
-  // Default permissions:
-  // Get a public partition
-  public static ReadOnlyPartition getReadOnlyPartition(String name);
-
-  // Default permissions:
-  // Get a user partition
-  public static Partition getUserPartition(String name);
-
-  // Get any partition
-  // Developers may use this signature if they created permissions themselves
-  // in CosmosDB
-  public static Partition getPartition(String name);
-
-  // TODO: add a method to get the resource token (+ information indicating if it is for a signed in user or anonymous user)
-
-  // After Build
-  // public static void setNetworkEnabled(boolean networkEnabled);
-  // public static boolean getNetworkEnabled();
-  // public static void setPersistenceEnabled(boolean persistenceEnabled);
-  // public static boolean getPersistenceEnabled();
-}
-
-// Public read-only partition
-public interface ReadOnlyPartition {
-
-  // Read
-  <T> AppCenterFuture<Document<T>> read(String documentId, class<T> documentType);
-
-  // List (need optional signature to configure page size)
-  <T> AppCenterFuture<Documents<T>> list(class<T> documentType);
-
-}
-
-// User read-write partition
-public interface Partition extends Partition {
-
-  // Create a document
-  <T> AppCenterFuture<Document<T>> create(String documentId, T document);
-
-  // Replace a document
-  <T> AppCenterFuture<Document<T>> replace(String documentId, T document);
-
-  // Create or replace (upsert) a document
-  <T> AppCenterFuture<Document<T>> createOrReplace(String documentId, T document);
-
-  // Delete a document
-  AppCenterFuture<Document<Void>> delete(String documentId);
-
-}
-
-public interface Document<T> {
-
-  // Non-serialized data (or null)
-  public String getJsonDocument();
-
-  // Deserialized data (or null)
-  public T getDocument();
-
-  // Error or null
-  public DataSyncError getError();
-
-  // ID + document metadata
-  public String getId();
-  public String getEtag();
-  public Timestamp getTimestamp();
-
-  // When caching is supported:
-  // Flag indicating if data was retrieved from the local cache (for offline mode)
-  // public boolean isFromCache();
-
-}
-
-public interface Documents<T> {
-
-  // List of results
-  public List<Document<T>> getDocuments();
-
-  // List of results (direct)
-  public List<T> asList();
-
-  // Flag indicating if more results can be fetched
-  public boolean hasNext();
-
-  // Fetch more results
-  public AppCenterFuture<Documents<T>> next();
-
-}
-
-public interface DataSyncError {
-  // TO DEFINE LATER: connectivity, conflicts, deserialization errors, unauthorized access
-}
-```
-
-# Mockups
-
-1. Connect and provision services **Work in Progress**
-2. View utilization metrics **Work in Progress**
-3. Browse document collections **Work in Progress**
+#### 7. As a developer, I can view utilization metrics associated with my data
+  
+![Designs for "As an app developer, I can view utilization metrics associated with my data"](./images/Scenario4_1.png)
