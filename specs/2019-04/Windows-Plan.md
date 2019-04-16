@@ -25,18 +25,18 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ### Diagnostics 
 
-- Crash reporting capabilities for store and sideloaded UWP (.NET Native) and WPF (.NET Framework) apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our [documentation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).  
+- Crash reporting capabilities for store and sideloaded UWP (.NET Native), WPF and WinForms (.NET Framework) apps aligned with other platforms supported in App Center. Find more details on App Center Diagnostics features in our [documentation](https://docs.microsoft.com/en-us/appcenter/diagnostics/features).  
 
 > Note: this does not include handled exceptions and [custom properties](https://docs.microsoft.com/en-us/appcenter/diagnostics/features#key-value-pairs).  
  
 
 ### Distribution 
 
-- Official support for WPF applications 
+- Official support for WPF and WinForms applications 
  
 > Note: this does not include in app updates through App Center.  
 ### Analytics
-- Analytics SDK for WPF (.NET Framework) apps and all of its functionalities as listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
+- Analytics SDK for WPF and WinForms (.NET Framework) apps and all of its functionalities as listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/).  
 
 ## HockeyApp Comparison (Windows Specific) 
 ### Diagnostics 
@@ -48,7 +48,7 @@ Note: “full support” means supporting all App Center crashes features as ind
 | UWP| Yes       | Partial support | Full support for crashes |
 | WPF| Yes       | None | Full support for crashes |
 | WinRT / Silverlight | Yes       | None | None |
-| WinForms | (Open Source)    | None | Stretch goal |
+| WinForms | (Open Source)    | None | Full support for crashes |
 | Win32 | None | None | None |
 
 
@@ -61,7 +61,7 @@ Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverligh
 | UWP| Yes       | Yes | None (already supported) |
 | WPF| Yes       | None | Official support for .NET framework |
 | WinRT / Silverlight | Yes       | None | None |
-| WinForms | (Open Source)    | None | Stretch goal |
+| WinForms | (Open Source)    | None | Full support for crashes |
 | Win32 | None | None | None |
 
 ### Analytics 
@@ -73,7 +73,7 @@ Note: HockeyApp has user & event tracking in it’s analytics today. Full suppor
 | UWP| Yes       | Yes | None (already supported) |
 | WPF| None       | None | Full support for .NET framework |
 | WinRT / Silverlight | Yes     | None | None |
-| WinForms | (Open Source)    | None | Stretch goal |
+| WinForms | (Open Source)    | None | Full support for crashes |
 | Win32 | None | None | None |
 
 
