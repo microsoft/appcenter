@@ -2,7 +2,7 @@
 
 Welcome to the primary repository for [Visual Studio App Center](https://appcenter.ms). Here you'll find a list of active opensource repositories our team contributes to, monthly iteration plans with key changes we plan to make and issues containing active discussions around new features and changes to the service.
 
-| [Top Feature Requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A%22feature+request%22) | [Open Bugs](https://github.com/Microsoft/appcenter/issues?q=is%3Aopen+is%3Aissue+label%3Abug)   | [Waiting for Triage](https://github.com/Microsoft/appcenter/issues?q=is%3Aopen+is%3Aissue+label%3Asdk+no%3Aassignee)  |
+| [Top Feature Requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A%22feature+request%22) | [Open Bugs](https://github.com/Microsoft/appcenter/issues?q=is%3Aopen+is%3Aissue+label%3Abug)   | [Waiting for Triage](https://github.com/Microsoft/appcenter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+no%3Aassignee+)  |
 |---|---|---|
 
 ***Have an issue or suggestion for the App Center team? [Let us know](https://github.com/Microsoft/appcenter/issues/new/choose)!***
