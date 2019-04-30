@@ -1,0 +1,236 @@
+// To load this Logic App flow 
+// 1. Create a new Logic App in your Azure subscription
+// 2. Go the Code View and replace it with the contents below
+
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Track_the_state_of_the_test_run": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "final_state",
+                            "type": "String",
+                            "value": "pending"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "You_can_replace_this_action_with_one_that_posts_a_start_test_run_message": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable"
+            },
+            "Wait_until_tests_are_completed": {
+                "actions": {
+                    "HTTP": {
+                        "inputs": {
+                            "headers": {
+                                "X-API-Token": "@triggerBody()?['token']"
+                            },
+                            "method": "GET",
+                            "uri": "https://api.appcenter.ms/v0.1/apps@{triggerBody()?['test_run']}"
+                        },
+                        "runAfter": {
+                            "Wait_30_seconds_and_check_our_test_run_in_App_Center": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "Http"
+                    },
+                    "Is_it_still_running": {
+                        "actions": {},
+                        "else": {
+                            "actions": {
+                                "Set_variable": {
+                                    "inputs": {
+                                        "name": "final_state",
+                                        "value": "@{body('Parse_Current_Test_Results')?['status']}"
+                                    },
+                                    "runAfter": {},
+                                    "type": "SetVariable"
+                                }
+                            }
+                        },
+                        "expression": {
+                            "and": [
+                                {
+                                    "equals": [
+                                        "@body('Parse_Current_Test_Results')?['state']",
+                                        "running"
+                                    ]
+                                }
+                            ]
+                        },
+                        "runAfter": {
+                            "Parse_Current_Test_Results": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "If"
+                    },
+                    "Parse_Current_Test_Results": {
+                        "inputs": {
+                            "content": "@body('HTTP')",
+                            "schema": {
+                                "properties": {
+                                    "appVersion": {
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "platform": {
+                                        "type": "string"
+                                    },
+                                    "resultStatus": {},
+                                    "runStatus": {
+                                        "type": "string"
+                                    },
+                                    "state": {
+                                        "type": "string"
+                                    },
+                                    "stats": {
+                                        "properties": {
+                                            "devices": {
+                                                "type": "number"
+                                            },
+                                            "devicesFailed": {
+                                                "type": "number"
+                                            },
+                                            "devicesFinished": {
+                                                "type": "number"
+                                            },
+                                            "failed": {
+                                                "type": "number"
+                                            },
+                                            "passed": {
+                                                "type": "number"
+                                            },
+                                            "peakMemory": {
+                                                "type": "number"
+                                            },
+                                            "skipped": {
+                                                "type": "number"
+                                            },
+                                            "total": {
+                                                "type": "number"
+                                            },
+                                            "totalDeviceMinutes": {
+                                                "type": "number"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "status": {},
+                                    "testSeries": {
+                                        "type": "string"
+                                    },
+                                    "testType": {
+                                        "type": "string"
+                                    },
+                                    "uploadedBy": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "runAfter": {
+                            "HTTP": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "ParseJson"
+                    },
+                    "Wait_30_seconds_and_check_our_test_run_in_App_Center": {
+                        "inputs": {
+                            "interval": {
+                                "count": 30,
+                                "unit": "Second"
+                            }
+                        },
+                        "runAfter": {},
+                        "type": "Wait"
+                    }
+                },
+                "expression": "@not(equals(variables('final_state'), 'pending'))",
+                "limit": {
+                    "count": 60,
+                    "timeout": "PT1H"
+                },
+                "runAfter": {
+                    "Track_the_state_of_the_test_run": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Until"
+            },
+            "You_can_replace_this_action_with_one_that_posts_a_start_test_finished_message": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "TestFinished",
+                            "type": "Boolean",
+                            "value": true
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Wait_until_tests_are_completed": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable"
+            },
+            "You_can_replace_this_action_with_one_that_posts_a_start_test_run_message": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "TestJustStarted",
+                            "type": "Boolean",
+                            "value": true
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "method": "POST",
+                    "schema": {
+                        "properties": {
+                            "test_run": {
+                                "type": "string"
+                            },
+                            "token": {
+                                "type": "string"
+                            },
+                            "view_url": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "operationOptions": "EnableSchemaValidation",
+                "type": "Request"
+            }
+        }
+    }
+}

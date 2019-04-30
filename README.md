@@ -9,10 +9,15 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 
 # Contents
 
+## Planning
 1. [Planning Process](https://github.com/Microsoft/appcenter/wiki/Planning)
 2. [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap)
 3. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iteration-plans)
-4. [Repositories](https://github.com/Microsoft/appcenter/wiki/Repositories)
+
+# Resources
+1. [Build Script Samples](https://github.com/Microsoft/appcenter/sample-build-scripts)
+2. [Repositories](https://github.com/Microsoft/appcenter/wiki/Repositories)
+
 
 # Legal Notices
 
