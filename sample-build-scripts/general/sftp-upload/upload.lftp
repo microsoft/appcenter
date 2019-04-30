@@ -1,0 +1,3 @@
+set sftp:auto-confirm yes
+open --env-password sftp://usernam@host
+put MyApp.ipa
