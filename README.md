@@ -15,7 +15,7 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 3. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iteration-plans)
 
 ## Resources
-1. [Build Script Samples](https://github.com/Microsoft/appcenter/sample-build-scripts)
+1. [Build Script Samples](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts)
 2. [Repositories](https://github.com/Microsoft/appcenter/wiki/Repositories)
 
 
