@@ -25,8 +25,43 @@ Given that at least one branch is already configured for a specific app, one can
 
 ### Designs
 
-To be shared
+There will be two entry points for cloning a branch configuration to a new branch.
 
+#### Cloning from the Branch List Page
+
+For unconfigured branches in the branch list, clicking the three-dot icon will reveal two options where there was previously a single click icon. The new option is to clone a build configuration.
+
+![Design for additional option on branch list page to clone build configuration](./images/configure_or_clone.png)
+
+After choosing to clone a build configuration, all existing branches with build configurations will be populated as configuarations to copy.
+
+![Design for populated list of configured branches available to be cloned from](./images/clone_options.png)
+
+An existing configuration should be selected and confirmed.
+
+![Design for confirming clone source selection](./images/clone_branch_select.png)
+
+A notification will show the clone was successful, and the newly configured branch is available to build.
+
+![Design for clone success and ready to build](./images/clone_success.png)
+
+#### Cloning from the Branch Build Details Page
+
+For an unconfigured branch, clicking the **Configure** button will reveal two options where there was previously a single click button. The new option is to clone a build configuration.
+
+![Design for additional option on branch build details page to clone build configuration](./images/configure_or_clone2.png)
+
+After choosing to clone a build configuration, all existing branches with build configurations will be populated as configuarations to copy.
+
+![Design for populated list of configured branches available to be cloned from](./images/clone_options2.png)
+
+An existing configuration should be selected and confirmed.
+
+![Design for confirming clone source selection](./images/clone_branch_select2.png)
+
+A notification will show the clone was successful, and the newly configured branch is available to build.
+
+![Design for clone success and ready to build](./images/clone_success2.png)
 ### API Experience
 
 To be shared
