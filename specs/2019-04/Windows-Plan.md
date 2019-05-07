@@ -1,4 +1,4 @@
-# App Center Windows Application Proposal 
+# App Center Windows Application Plan
 
 This plan details the proposed improvements for App Center’s Windows application offering along with a comparison of App Center and HockeyApp. This is work in progress and will be iterated upon based on any internal updates and feedback from the community. We expect to start work on the planned items in the second quarter of 2019. 
 
