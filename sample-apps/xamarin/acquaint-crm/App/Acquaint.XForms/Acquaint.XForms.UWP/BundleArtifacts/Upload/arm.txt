@@ -1,0 +1,6 @@
+MainPackage=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\bin\ARM\Release\Upload\Acquaint.XForms.UWP_1.1.0.0_ARM.appx
+SymbolPackage=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\AppPackages\Acquaint.XForms.UWP_1.1.0.0\Acquaint.XForms.UWP_1.1.0.0_ARM.appxsym
+ResourcePack=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\_scale-100.appx
+ResourcePack=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\_scale-125.appx
+ResourcePack=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\_scale-150.appx
+ResourcePack=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\_scale-400.appx

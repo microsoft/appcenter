@@ -1,0 +1,30 @@
+PODS:
+  - AppCenter/Analytics (1.7.1):
+    - AppCenter/Core
+  - AppCenter/Core (1.7.1)
+  - AppCenter/Crashes (1.7.1):
+    - AppCenter/Core
+  - AppCenterReactNativeShared (1.6.0):
+    - AppCenter/Core (= 1.7.1)
+  - AppCenterXCUITestExtensions (1.0.0)
+
+DEPENDENCIES:
+  - AppCenter/Analytics (~> 1.7.1)
+  - AppCenter/Crashes (~> 1.7.1)
+  - AppCenterReactNativeShared (~> 1.6.0)
+  - AppCenterXCUITestExtensions (= 1.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AppCenter
+    - AppCenterReactNativeShared
+    - AppCenterXCUITestExtensions
+
+SPEC CHECKSUMS:
+  AppCenter: 53349f138e596f2514f7559bb50a7e6e55219f17
+  AppCenterReactNativeShared: 9174f9a976f5d4b1949dccfac7f3a38399478c87
+  AppCenterXCUITestExtensions: 8825ed941664fa21d6740a5ed6928a84c06623ac
+
+PODFILE CHECKSUM: 3879e404c5deed2e863e6540908f87bb9b289b8a
+
+COCOAPODS: 1.5.0

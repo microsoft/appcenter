@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AC Sample App</string>
+
+    <string name="analytics_description">"Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data."</string>
+    <string name="push_description">"Engage your users by sending them targeted messages to specific sets of users at exactly the right time.Create segments of users based on device and custom properties."</string>
+    <string name="build_description">"Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).\n\nNo additional build hardware required."</string>
+    <string name="test_description">"Run your tests on more than 400 unique device configurations. Tests can be written for iOS and Android apps with Xamarin.UITest, Appium, Espresso (Android), and XCUITest (iOS).\n\nBacked by Xamarin Test Cloud."</string>
+    <string name="distribute_description">"Users can install the app via email distribution lists for testing, much as they\'d download an app from the app store.\n\nBacked by HockeyApp."</string>
+    <string name="crashes_description">"Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them.\n\nBacked by HockeyApp."</string>
+    <string name="welcome_description">"Visual Studio App Center is mission control for apps. It brings together multiple services, commonly used for mobile developers, into a single, integrated product.\n\n\nSwipe right to learn about our services"</string>
+
+    <string name="crashes_crashButton">"Send a sample crash"</string>
+    <string name="analytics_customEventButton">"Send a sample event"</string>
+    <string name="analytics_customColorButton">"Send event with color property"</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Acquaint.XForms.SetupPage" 
+	Title="Setup">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" Margin="10">
+			<Entry x:Name="DataPartitionPhraseEntry" Placeholder="Enter a unique phrase" Keyboard="Text"/>
+			<Button x:Name="ContinueButton" Text="Continue" Command="{Binding ContinueCommand}" />
+			<Label x:Name="Label1" LineBreakMode="WordWrap" Text="The phrase is a key that will separate your data from everyone else's data. Make it unique." />
+			<Label x:Name="Label2" LineBreakMode="WordWrap" Text="Enter this same phrase on any device running Acquaint that you'd like to sync data with." />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

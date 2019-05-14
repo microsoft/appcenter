@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Acquaint.XForms.AcquaintanceListPage" xmlns:local="clr-namespace:Acquaint.XForms" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" x:Name="acquaintanceListPage" NavigationPage.BackButtonTitle="List">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:BooleanInverter x:Key="BooleanInverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.ToolbarItems>
+    <!-- The Refresh ToolBarItem is only for UWP. See code-behind. -->
+    <ToolbarItem x:Name="refreshToolbarItem" Icon="refresh.png" Text="Refresh" Command="{Binding RefreshAcquaintancesCommand}" />
+    <!-- The Settings ToolBarItem is present on all platforms. -->
+        <ToolbarItem x:Name="settingsToolbarItem" Icon="settings.png" Text="Settings" Command="{Binding ShowSettingsCommand}" />
+        <ToolbarItem x:Name="signInToolbarItem" Text="{Binding SignInOut.SignedInState}" Command="{Binding ShowSignIn}" />
+    <!-- The Add Acquaintance ToolBarItem is removed for Android. See code-behind.  -->
+		<ToolbarItem x:Name="addAcquaintanceToolbarItem" Icon="add.png" Text="New" Command="{Binding NewAcquaintanceCommand}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<OnPlatform x:TypeArguments="View">
+			
+			<!-- Here we have three different listview layouts, one for each platform. Mainly to support the floating action button in our Android version of the app. -->
+			<!-- You could simply have a single layout for all platforms, but our particular app design dictates some slight differences between platforms. -->
+			
+			<OnPlatform.iOS>
+				<!-- Using RetailElement as the CachingStrategy only on iOS and only until this fix is released: https://github.com/xamarin/Xamarin.Forms/pull/338 -->
+				<ListView ItemsSource="{Binding Acquaintances}" CachingStrategy="RetainElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="true" RefreshCommand="{Binding RefreshAcquaintancesCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell StyleId="disclosure" Height="60">
+								<!-- Commenting out the ViewCell.ContextActions until this fix is released: https://github.com/xamarin/Xamarin.Forms/pull/338 -->
+								<!--<ViewCell.ContextActions>
+									<MenuItem Text="Email" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.EmailCommand}" CommandParameter="{Binding Id}" />
+									<MenuItem Text="Text" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.MessageNumberCommand}" CommandParameter="{Binding Id}" />
+									<MenuItem Text="Call" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.DialNumberCommand}" CommandParameter="{Binding Id}" />
+								</ViewCell.ContextActions>-->
+								<AbsoluteLayout>
+									<StackLayout Orientation="Horizontal" Spacing="0" AbsoluteLayout.LayoutFlags="XProportional" AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize">
+										<ContentView Margin="3" WidthRequest="54">
+											<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" LoadingPlaceholder="placeholderProfileImage.png">
+												<ffimageloading:CachedImage.Transformations>
+													<fftransformations:CircleTransformation />
+												</ffimageloading:CachedImage.Transformations>
+											</ffimageloading:CachedImage>
+										</ContentView>
+										<ContentView Padding="10,0,0,0">
+											<StackLayout Spacing="0">
+												<Label Text="{Binding DisplayLastNameFirst}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding Company}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding JobTitle}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+											</StackLayout>
+										</ContentView>
+									</StackLayout>
+								</AbsoluteLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</OnPlatform.iOS>
+			
+			<OnPlatform.Android>
+				<AbsoluteLayout>
+					<AbsoluteLayout.Children>
+						<ListView ItemsSource="{Binding Acquaintances}" CachingStrategy="RecycleElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="true" RefreshCommand="{Binding RefreshAcquaintancesCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+							<ListView.ItemTemplate>
+								<DataTemplate>
+									<ViewCell StyleId="disclosure" Height="60">
+										<ViewCell.ContextActions>
+											<MenuItem Text="Email" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.EmailCommand}" CommandParameter="{Binding Id}" />
+											<MenuItem Text="Text" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.MessageNumberCommand}" CommandParameter="{Binding Id}" />
+											<MenuItem Text="Call" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.DialNumberCommand}" CommandParameter="{Binding Id}" />
+										</ViewCell.ContextActions>
+										<ContentView Padding="10,0">
+											<StackLayout Orientation="Horizontal" Spacing="0">
+												<ContentView Margin="3" WidthRequest="54">
+													<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" LoadingPlaceholder="placeholderProfileImage.png">
+														<ffimageloading:CachedImage.Transformations>
+															<fftransformations:CircleTransformation />
+														</ffimageloading:CachedImage.Transformations>
+													</ffimageloading:CachedImage>
+												</ContentView>
+												<ContentView Padding="10,0,0,0">
+													<StackLayout Spacing="0">
+														<Label Text="{Binding DisplayLastNameFirst}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />
+														<Label Text="{Binding Company}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+														<Label Text="{Binding JobTitle}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+													</StackLayout>
+												</ContentView>
+											</StackLayout>
+										</ContentView>
+									</ViewCell>
+								</DataTemplate>
+							</ListView.ItemTemplate>
+						</ListView>
+						<local:FloatingActionButtonView x:Name="fab" ImageName="fab_add" ColorNormal="#547799" ColorPressed="#172839" ColorRipple="#2C3E50" AbsoluteLayout.LayoutBounds="1.0, 1.0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+					</AbsoluteLayout.Children>
+				</AbsoluteLayout>
+			</OnPlatform.Android>
+			
+			<OnPlatform.WinPhone>
+				<ListView ItemsSource="{Binding Acquaintances}" CachingStrategy="RecycleElement" RowHeight="60" HasUnevenRows="false" ItemTapped="ItemTapped" IsPullToRefreshEnabled="true" RefreshCommand="{Binding RefreshAcquaintancesCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell StyleId="disclosure" Height="60">
+								<ViewCell.ContextActions>
+									<MenuItem Text="Email" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.EmailCommand}" CommandParameter="{Binding Id}" />
+									<MenuItem Text="Text" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.MessageNumberCommand}" CommandParameter="{Binding Id}" />
+									<MenuItem Text="Call" Command="{Binding Source={x:Reference acquaintanceListPage}, Path=BindingContext.DialNumberCommand}" CommandParameter="{Binding Id}" />
+								</ViewCell.ContextActions>
+								<ContentView Padding="10,0">
+									<StackLayout Orientation="Horizontal" Spacing="0">
+										<ContentView Margin="3" WidthRequest="54">
+											<ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" DownsampleToViewSize="true" Source="{Binding SmallPhotoUrl}" LoadingPlaceholder="placeholderProfileImage.png">
+												<ffimageloading:CachedImage.Transformations>
+													<fftransformations:CircleTransformation />
+												</ffimageloading:CachedImage.Transformations>
+											</ffimageloading:CachedImage>
+										</ContentView>
+										<ContentView Padding="10,0,0,0">
+											<StackLayout Spacing="0">
+												<Label Text="{Binding DisplayLastNameFirst}" HeightRequest="20" VerticalTextAlignment="End" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding Company}" HeightRequest="20" VerticalTextAlignment="End" FontSize="Micro" LineBreakMode="TailTruncation" />
+												<Label Text="{Binding JobTitle}" HeightRequest="20" VerticalTextAlignment="Start" FontSize="Micro" LineBreakMode="TailTruncation" TextColor="Silver" />
+											</StackLayout>
+										</ContentView>
+									</StackLayout>
+								</ContentView>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</OnPlatform.WinPhone>
+			
+		</OnPlatform>
+	</ContentPage.Content>
+</ContentPage>

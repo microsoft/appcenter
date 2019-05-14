@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Acquaint.XForms.AcquaintanceEditPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Save" Icon="save.png" Command="{Binding SaveAcquaintanceCommand}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ContentView x:Name="TopContentView">
+			<ContentView.Padding>
+				<OnPlatform x:TypeArguments="Thickness" WinPhone="10" />
+			</ContentView.Padding>
+			<ContentView.Content>
+				<TableView Intent="Settings" BackgroundColor="White">
+					<TableRoot>
+						<TableSection Title="Name">
+							<EntryCell Label="First" Text="{Binding Acquaintance.FirstName}" Keyboard="Text" />
+							<EntryCell Label="Last" Text="{Binding Acquaintance.LastName}" Keyboard="Text" />
+						</TableSection>
+						<TableSection Title="Employment">
+							<EntryCell Label="Company" Text="{Binding Acquaintance.Company}" Keyboard="Text" />
+							<EntryCell Label="Title" Text="{Binding Acquaintance.JobTitle}" Keyboard="Text" />
+						</TableSection>
+						<TableSection Title="Contact">
+							<EntryCell Label="Phone" Text="{Binding Acquaintance.Phone}" Keyboard="Telephone" />
+							<EntryCell Label="Email" Text="{Binding Acquaintance.Email}" Keyboard="Email" />
+						</TableSection>
+						<TableSection Title="Address">
+							<EntryCell Label="Street" Text="{Binding Acquaintance.Street}" Keyboard="Text" />
+							<EntryCell Label="City" Text="{Binding Acquaintance.City}" Keyboard="Text" />
+							<EntryCell Label="State" Text="{Binding Acquaintance.State}" Keyboard="Text" PropertyChanged="StateEntry_PropertyChanged" />
+							<EntryCell Label="ZIP" Text="{Binding Acquaintance.PostalCode}" Keyboard="Numeric" PropertyChanged="PostalCode_PropertyChanged" />
+						</TableSection>
+					</TableRoot>
+				</TableView>
+			</ContentView.Content>
+		</ContentView>
+	</ContentPage.Content>
+</ContentPage>

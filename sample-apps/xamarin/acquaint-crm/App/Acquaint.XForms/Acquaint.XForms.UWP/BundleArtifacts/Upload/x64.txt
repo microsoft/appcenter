@@ -1,0 +1,2 @@
+MainPackage=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\bin\x64\Release\Upload\Acquaint.XForms.UWP_1.1.0.0_x64.appx
+SymbolPackage=Z:\Projects\app-acquaint\Acquaint.XForms\Acquaint.XForms.UWP\AppPackages\Acquaint.XForms.UWP_1.1.0.0\Acquaint.XForms.UWP_1.1.0.0_x64.appxsym

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#252525</color>
+    <color name="colorAccent">#282828</color>
+
+    <color name="colorAnalyticsBackground">#ffc326</color>
+    <color name="colorPushBackground">#F56D4F</color>
+    <color name="colorCrashesBackground">#91CA47</color>
+    <color name="colorDistributeBackground">#44B8A8</color>
+    <color name="colorTestBackground">#24B8D4</color>
+    <color name="colorBuildBackground">#0078d7</color>
+    <color name="colorWelcomeBackground">#252525</color>
+
+    <color name="colorAnalyticsImageBackground">#fdad00</color>
+    <color name="colorPushImageBackground">#e2553d</color>
+    <color name="colorCrashesImageBackground">#6FA22E</color>
+    <color name="colorDistributeImageBackground">#38A495</color>
+    <color name="colorTestImageBackground">#3192B3</color>
+    <color name="colorBuildImageBackground">#0064c3</color>
+    <color name="colorWelcomeImageBackground">#CB2E62</color>
+
+</resources>

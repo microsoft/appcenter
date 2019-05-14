@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Acquaint.XForms" x:Class="Acquaint.XForms.SettingsPage" Title="Settings">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="cancel.png" Text="Cancel" Command="{Binding CancelCommand}" />
+		<ToolbarItem Icon="save.png" Text="Save" Command="{Binding SaveCommand}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ContentView x:Name="TopContentView">
+			<ContentView.Content>
+				<TableView Intent="Menu" StyleId="NoSeparator" Margin="10,0">
+					<TableView.BackgroundColor>
+						<OnPlatform x:TypeArguments="Color" iOS="White" />
+					</TableView.BackgroundColor>
+					<TableView.Root>
+						<TableRoot>
+							<TableSection Title="Data Partition Phrase (required)">
+								<ViewCell>
+									<StackLayout>
+										<Entry x:Name="DataPartitionPhraseEntry" Text="{Binding DataPartitionPhrase}" Placeholder="Enter a unique phrase" Keyboard="Text" />
+									</StackLayout>
+								</ViewCell>
+							</TableSection>
+							<TableSection Title="Backend URL (required valid URL)">
+								<ViewCell>
+									<StackLayout>
+										<Entry x:Name="BackendServiceUrlEntry" Text="{Binding AzureAppServiceUrl}" Placeholder="ex: http://yourservice.azurewebsites.net" Keyboard="Text" />
+									</StackLayout>
+								</ViewCell>
+							</TableSection>
+							<TableSection Title="Image Cache Duration (in hours)">
+								<ViewCell>
+									<StackLayout>
+										<Entry Text="{Binding ImageCacheDurationHours}" Keyboard="Numeric" />
+									</StackLayout>
+								</ViewCell>
+							</TableSection>
+							<TableSection>
+								<SwitchCell Text="Clear image cache?" On="{Binding ClearImageCache}" />
+								<SwitchCell Text="Reset to defaults?" On="{Binding ResetToDefaults}" />
+							</TableSection>
+						</TableRoot>
+					</TableView.Root>
+				</TableView>
+			</ContentView.Content>
+		</ContentView>
+	</ContentPage.Content>
+</ContentPage>
