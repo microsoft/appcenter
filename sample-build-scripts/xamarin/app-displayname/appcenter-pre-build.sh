@@ -33,7 +33,7 @@ ANDROID_MAINACTIVITY_FILE=${APPCENTER_SOURCE_DIRECTORY}/My_XF_App.Droid/MainActi
 
 echo "##[warning][Pre-Build Action] - Checking if all files and environment variables are available..."
 
-if [ ! -n "${APP_DISPLAY_NAME}" ]
+if [ -z "${APP_DISPLAY_NAME}" ]
 then
     echo "##[error][Pre-Build Action] - APP_DISPLAY_NAME variable needs to be defined in App Center!!!"
     let "SCRIPT_ERROR += 1"

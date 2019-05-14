@@ -3,7 +3,7 @@
 # For Xamarin Android or iOS, change the package name located in AndroidManifest.xml and Info.plist. 
 # AN IMPORTANT THING: YOU NEED DECLARE PACKAGE_NAME ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
 
-if [ ! -n "$PACKAGE_NAME" ]
+if [ -z "$PACKAGE_NAME" ]
 then
     echo "You need define the PACKAGE_NAME variable in App Center"
     exit
