@@ -12,7 +12,7 @@
 # DECLARE THE GOOGLE_SERVICES_JSON ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION, SET
 # TO THE CONTENTS OF YOUR google-services.json FILE
 
-if [ ! -n "$GOOGLE_SERVICES_JSON" ]
+if [ -z "$GOOGLE_SERVICES_JSON" ]
 then
     echo "You need define the GOOGLE_SERVICES_JSON variable in App Center"
     exit

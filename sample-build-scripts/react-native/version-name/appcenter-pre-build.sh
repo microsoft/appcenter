@@ -1,4 +1,4 @@
-if [ ! -n "$VERSION_NAME" ]
+if [ -z "$VERSION_NAME" ]
 then
     echo "You need define the VERSION_NAME variable in App Center"
     exit

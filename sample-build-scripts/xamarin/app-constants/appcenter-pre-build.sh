@@ -19,7 +19,7 @@
 #
 # AN IMPORTANT THING: FOR THIS SAMPLE YOU NEED DECLARE API_URL ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
 
-if [ ! -n "$API_URL" ]
+if [ -z "$API_URL" ]
 then
     echo "You need define the API_URL variable in App Center"
     exit

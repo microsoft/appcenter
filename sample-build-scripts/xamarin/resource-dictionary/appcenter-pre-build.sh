@@ -17,7 +17,7 @@
 # AN IMPORTANT THING: YOU NEED DECLARE MAIN_COLOR ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
 #
 
-if [ ! -n "$MAIN_COLOR" ]
+if [ -z "$MAIN_COLOR" ]
 then
     echo "You need define the MAIN_COLOR variable in App Center"
     exit
