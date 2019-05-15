@@ -23,9 +23,9 @@ target 'AppCenterSample' do
   #pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   # Pods for AppCenter
-  pod 'AppCenter/Crashes', '~> 1.7.1'
-  pod 'AppCenter/Analytics', '~> 1.7.1'
-  pod 'AppCenterReactNativeShared', '~> 1.6.0'
+  pod 'AppCenter/Crashes', '~> 2.0.1'
+  pod 'AppCenter/Analytics', '~> 2.0.1'
+  pod 'AppCenterReactNativeShared', '~> 2.0.0'
 
   platform :ios, '9.0'
 end
