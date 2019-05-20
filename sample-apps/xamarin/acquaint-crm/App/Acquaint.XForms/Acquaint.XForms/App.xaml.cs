@@ -46,7 +46,7 @@ namespace Acquaint.XForms
             }
 
             AppCenter.LogLevel = LogLevel.Verbose;
-            AppCenter.Start("android=e2a89d4b-929c-4936-9b70-e33ace1ac02c;uwp=34d5ed40-4ff1-4db4-9ef6-0eefbf97e8ab;ios=e2a89d4b-929c-4936-9b70-e33ace1ac02c", typeof(Analytics), typeof(Auth), typeof(Crashes), typeof(AcData.Data));
+            AppCenter.Start("android=d4e8726b-5b74-4661-8e07-77aeb238bea9;uwp=34d5ed40-4ff1-4db4-9ef6-0eefbf97e8ab;ios=a2771d3a-e077-458a-8acf-dad9e0add01d", typeof(Analytics), typeof(Auth), typeof(Crashes), typeof(AcData.Data));
             Analytics.TrackEvent("StartCalled",new System.Collections.Generic.Dictionary<string,string> {{ "StartTime",System.DateTime.Now.ToString("HH:MM")}});
         }
 

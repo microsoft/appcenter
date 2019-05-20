@@ -15,7 +15,7 @@
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:host="auth" android:scheme="msale2a89d4b-929c-4936-9b70-e33ace1ac02c" />
+				<data android:host="auth" android:scheme="msald4e8726b-5b74-4661-8e07-77aeb238bea9" />
 			</intent-filter>
 		</activity>
 		<!-- Put your Google Maps V2 API Key here. -->
