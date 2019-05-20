@@ -231,7 +231,7 @@ namespace Acquaint.XForms
 
             if (_CapabilityService.CanMakeCalls)
             {
-                var phoneCallTask = MessagingPlugin.PhoneDialer;
+                var phoneCallTask = CrossMessaging.Current.PhoneDialer;
                 if (phoneCallTask.CanMakePhoneCall)
                     phoneCallTask.MakePhoneCall(acquaintance.Phone.SanitizePhoneNumber());
             }
@@ -273,7 +273,7 @@ namespace Acquaint.XForms
 
             if (_CapabilityService.CanSendMessages)
             {
-                var messageTask = MessagingPlugin.SmsMessenger;
+                var messageTask = CrossMessaging.Current.SmsMessenger;
                 if (messageTask.CanSendSms)
                     messageTask.SendSms(acquaintance.Phone.SanitizePhoneNumber());
             }
@@ -315,7 +315,7 @@ namespace Acquaint.XForms
 
             if (_CapabilityService.CanSendEmail)
             {
-                var emailTask = MessagingPlugin.EmailMessenger;
+                var emailTask = CrossMessaging.Current.EmailMessenger;
                 if (emailTask.CanSendEmail)
                     emailTask.SendEmail(acquaintance.Email);
             }
