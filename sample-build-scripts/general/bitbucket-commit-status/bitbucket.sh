@@ -28,20 +28,24 @@ bitbucket_set_status() {
 	local status job_status
 	local "${@}"
 
-	curl -u $BITBUCKET_CREDENTIALS \
-		-X POST \
-		-H "Content-Type: application/json" \
-		-d \
-		"{
-			\"state\": \"$status\",
-			\"key\": \"$APPCENTER_BRANCH\",
-			\"name\": \"$BUILD_REPOSITORY_NAME #$APPCENTER_BUILD_ID\",
-			\"description\": \"The bulid status is: $job_status!\",
-			\"url\": \"$BUILD_URL\"
-		}" \
-		-H "Content-Type: application/json" \
-		-w "%{http_code}" \
-		https://api.bitbucket.org/2.0/repositories/$ORG/$BUILD_REPOSITORY_NAME/commit/$BUILD_SOURCEVERSION/statuses/build
+	if [ ! -z "$BITBUCKET_CREDENTIALS" ]; then
+		curl -u $BITBUCKET_CREDENTIALS \
+			-X POST \
+			-H "Content-Type: application/json" \
+			-d \
+			"{
+				\"state\": \"$status\",
+				\"key\": \"$APPCENTER_BRANCH\",
+				\"name\": \"$BUILD_REPOSITORY_NAME #$APPCENTER_BUILD_ID\",
+				\"description\": \"The bulid status is: $job_status!\",
+				\"url\": \"$BUILD_URL\"
+			}" \
+			-H "Content-Type: application/json" \
+			-w "%{http_code}" \
+			https://api.bitbucket.org/2.0/repositories/$ORG/$BUILD_REPOSITORY_NAME/commit/$BUILD_SOURCEVERSION/statuses/build
+	else
+		echo "Bitbucket credentials not found; skipping status update."
+	fi
 }
 
 bitbucket_set_status_pending() {
