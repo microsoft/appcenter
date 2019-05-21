@@ -73,7 +73,7 @@ Note: HockeyApp has user & event tracking in it’s analytics today. Full suppor
 | UWP| Yes       | Yes | None (already supported) |
 | WPF| None       | None | Full support for .NET framework |
 | WinRT / Silverlight | Yes     | None | None |
-| WinForms | (Open Source)    | None | Full support for crashes |
+| WinForms | (Open Source)    | None | Full support for .NET framework |
 | Win32 | None | None | None |
 
 
