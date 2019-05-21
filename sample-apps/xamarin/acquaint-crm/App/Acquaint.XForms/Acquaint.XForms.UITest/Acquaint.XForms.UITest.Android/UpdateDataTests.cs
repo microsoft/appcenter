@@ -25,7 +25,7 @@ namespace Acquaint.XForms.UITest.Android
 
 				// TODO: Update this path to point to your Android app and uncomment the
 				// code if the app is not included in the solution.
-				//.ApkFile ("../../../Android/bin/Debug/UITestsAndroid.apk")
+				.ApkFile ("C:/Users/jawh/Documents/GitHub/appcenter/sample-apps/xamarin/acquaint-crm/App/Acquaint.XForms/Acquaint.XForms.Droid/bin/AnyCPU/Debug/com.xamarin.acquaintforms.apk")
 				//
 				// ^^^ THIS IS *NOT* THE WAY THE ACQUAINT APP IS SETUP FOR UITESTS ^^^
 				.StartApp();
@@ -34,32 +34,27 @@ namespace Acquaint.XForms.UITest.Android
 		[Test]
 		public void UpdateFirstName()
 		{
-			app.Screenshot("App Started");
-			app.EnterText(x => x.Class("EntryEditText"), "UseLocalDataSource");
-			app.Screenshot("Entered data parition phrase");
-			app.Tap(x => x.Text("Continue"));
-			app.WaitForElement(x => x.Marked("Armstead, Evan"));
-			Thread.Sleep(3000); // wait a few seconds for list images to fully load
-			app.Screenshot("Display list");
-			app.Tap(x => x.Text("Armstead, Evan"));
-			Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
-			app.Screenshot("Detail screen");
-			app.Tap(x => x.Marked("Edit"));
-			app.Screenshot("Edit screen");
-			app.ScrollDownTo("First");
-			app.Tap(x => x.Text("Evan"));
-			app.ClearText();
-			app.Screenshot("Cleared first name field");
-			app.EnterText("Jonathan");
-			app.DismissKeyboard();
-			app.Screenshot("Altered value of first name field");
-			app.Tap(x => x.Marked("Save"));
-			Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
-			app.Screenshot("Saved changes, navigated to detail screen, first name updated");
-			app.Tap(x => x.Class("ImageButton"));
-			app.Screenshot("First name updated on list screen");
+            app.WaitForElement(x => x.Text("Green, Monica"));
+            Thread.Sleep(1000); // wait a few seconds for list images to fully load
+            app.Screenshot("App Loaded");
+            app.Tap(x => x.Text("Green, Monica"));
+            Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
+            app.Screenshot("User Detail screen");
+            app.Tap(x => x.Marked("Edit"));
+            app.ScrollDownTo("First");
+            app.Tap(x => x.Text("Monica")); ;
+            app.ClearText();
+            app.Screenshot("Cleared first name field");
+            app.EnterText("Sandy");
+            app.DismissKeyboard();
+            app.Tap(x => x.Marked("Save"));
+            Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
+            app.Screenshot("Saved changes, navigated to detail screen, first name updated");
+            app.Back();
+            app.Screenshot("Verify Final Result");
 		}
 
+        /*
 		[Test]
 		public void UpdateLastName()
 		{
@@ -243,6 +238,7 @@ namespace Acquaint.XForms.UITest.Android
 			Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
 			app.Screenshot("Saved changes, navigated to detail screen, address updated");
 		}
+        */
 	}
 }
 
