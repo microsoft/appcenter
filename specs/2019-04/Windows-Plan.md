@@ -66,7 +66,7 @@ Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverligh
 
 ### Analytics 
 
-Note: HockeyApp has user & event tracking in it’s analytics today. Full support in App Center means having a working App Center Analytics SDK with the full capabilities listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/). 
+Note: HockeyApp has basic user metrics & event tracking in its analytics service. Full support in App Center means having a working App Center Analytics SDK with the full capabilities listed in App Center's [analytics documentation](https://docs.microsoft.com/en-us/appcenter/analytics/). 
 
 |    | HockeyApp | App Center Today | Proposal | 
 | ---| --------- |:----------------:| ------- |
