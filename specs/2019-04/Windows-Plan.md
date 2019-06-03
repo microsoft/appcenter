@@ -11,8 +11,8 @@ This plan details the proposed improvements for App Center’s Windows applicati
 
 ### Distribution
 
-- Distributing UWP and Unity UWP apps using the APPX or MSIX package format
-- Unofficial support to distribute WPF and WinForms apps when packaged as APPX or MSIX using the [Windows Application Packaging](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- Distributing UWP and Unity UWP apps in .appx, .appxbundle, .appxupload, .msix, .msixbundle, .msixupload or .zip file
+- Unofficial support for distributing WPF and WinForms apps when packaged in the formats listed above using the [Windows Application Packaging](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
 
 ### Analytics 
 
@@ -61,7 +61,7 @@ Note: HockeyApp supports over the air app updates for WPF, WinRT, and Silverligh
 | UWP| Yes       | Yes | None (already supported) |
 | WPF| Yes       | None | Official support for .NET framework |
 | WinRT / Silverlight | Yes       | None | None |
-| WinForms | (Open Source)    | None | Full support for crashes |
+| WinForms | (Open Source)    | None | Full support for .NET framework |
 | Win32 | None | None | None |
 
 ### Analytics 
@@ -84,7 +84,6 @@ Our team is considering support other features including, but not limited to the
 - Handled exceptions for UWP apps [(#150)](https://github.com/Microsoft/appcenter/issues/150)
 - Distributing Windows apps using .appinstaller files (this will allow developers to release over the air updates) [(#52)](https://github.com/Microsoft/appcenter/issues/52) 
 - Distribution, analytics and crash reporting for .NET Core 3. This will include Console, WinForms and WPF apps. [(#53)](https://github.com/Microsoft/appcenter/issues/53)
-- Distribution, analytics and crash reporting for WinForms 
 - Build support for WPF apps [(#85)](https://github.com/Microsoft/appcenter/issues/85)
 
  Please give existing feature request a +1 or create a new request specifying the Windows platform to help our team better prioritize.  
