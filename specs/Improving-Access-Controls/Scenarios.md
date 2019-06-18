@@ -125,4 +125,3 @@ Granular permissions across all App Center services:
 ![View entire role permission list](./5.png)
 
 
-1. Admins can create, update and delete additional roles
