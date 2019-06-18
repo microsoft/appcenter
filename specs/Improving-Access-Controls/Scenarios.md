@@ -111,3 +111,13 @@ With an existing `Team` structure already in place the assumption is this serves
 ## Audit
 
 1. Admins, developers and viewers can view an audit trail of actions performed by users within an app or org
+
+# Mockups
+![Create a role][1.png]
+![Custom roles list[2.png]
+![Create a custom role][3.png]
+![Edit role permissions][4.png]
+![View entire role permission list][5.png]
+
+
+1. Admins can create, update and delete additional roles
