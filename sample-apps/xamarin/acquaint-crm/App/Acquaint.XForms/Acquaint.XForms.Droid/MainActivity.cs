@@ -10,6 +10,7 @@ using Android.OS;
 using Autofac;
 using Autofac.Extras.CommonServiceLocator;
 using FFImageLoading.Forms.Droid;
+using HockeyApp.Android;
 using Microsoft.Practices.ServiceLocation;
 using Xamarin;
 using Xamarin.Forms;
@@ -38,6 +39,9 @@ namespace Acquaint.XForms.Droid
 			FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
 
 			base.OnCreate (bundle);
+
+			// register HockeyApp as the crash reporter
+			CrashManager.Register(this, Settings.HockeyAppId);
 
 			Forms.Init (this, bundle);
 

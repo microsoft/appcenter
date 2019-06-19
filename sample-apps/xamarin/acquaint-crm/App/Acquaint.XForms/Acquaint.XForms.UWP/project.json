@@ -1,0 +1,36 @@
+﻿{
+  "dependencies": {
+    "Autofac": "3.5.2",
+    "Autofac.Extras.CommonServiceLocator": "4.0.0",
+    "CommonServiceLocator": "1.3.0",
+    "FormsToolkit": "1.1.18",
+    "HockeySDK.UWP": "4.1.5",
+    "Microsoft.AppCenter": "2.0.0-r0039-9602447",
+    "Microsoft.AppCenter.Analytics": "2.0.0-r0039-9602447",
+    "Microsoft.AppCenter.Auth": "2.0.0-r0039-9602447",
+    "Microsoft.AppCenter.Crashes": "2.0.0-r0039-9602447",
+    "Microsoft.AppCenter.Data": "2.0.0-r0039-9602447",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Newtonsoft.Json": "12.0.2",
+    "PCLStorage": "1.0.2",
+    "Refractored.MvvmHelpers": "1.2.2",
+    "Xam.Plugin.ExternalMaps": "3.0.10",
+    "Xam.Plugins.Messaging": "4.0.0",
+    "Xam.Plugins.Settings": "2.5.4",
+    "Xamarin.FFImageLoading": "2.2.9",
+    "Xamarin.FFImageLoading.Forms": "2.2.9",
+    "Xamarin.FFImageLoading.Transformations": "2.2.9",
+    "Xamarin.Forms.Maps": "2.3.4.231"
+  },
+  "frameworks": {
+    "uap10.0.10240": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}

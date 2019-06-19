@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "165922544440",
+    "firebase_url": "https://acquaint-16ee6.firebaseio.com",
+    "project_id": "acquaint-16ee6",
+    "storage_bucket": "acquaint-16ee6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165922544440:android:800202aaa6800f67",
+        "android_client_info": {
+          "package_name": "com.xamarin.acquaintforms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165922544440-923gc1bgjsig83icufokmffsmdprjq0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDetZDBxmxK2v5wx2kyfdGGwRv5pdCAGVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165922544440-923gc1bgjsig83icufokmffsmdprjq0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
