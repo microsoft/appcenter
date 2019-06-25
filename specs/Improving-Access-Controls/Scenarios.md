@@ -71,7 +71,7 @@ Custom roles will include the ability to include or exclude access to a specific
   
 ### Diagnostics
 
-  1. Can delete issues
+  1. Can (re)-open, edit, close or delete issues
   1. Can view diagnostics
   
 ### Analytics
