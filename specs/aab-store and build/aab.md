@@ -5,9 +5,10 @@ This feature will only cover support for .aab packages in the Stores service, an
 	
 ## Problem Statement
 	
-Google has introduced AAB and it's been the recommended method to upload packages to the Play Store.
+Google has introduced Android App Bundles (AAB) and it's been the recommended method to upload packages to the Play Store.
 
-Google has also announced that By August 1, 2019, all apps that use native code must provide a 64-bit version in addition to the 32-bit version in order to publish an update. 
+The company has also announced that By August 1, 2019, all apps that use native code must provide a 64-bit version in addition to the 32-bit version in order to publish an update. 
+Using Android App Bundle feature will minimize the size impact of including both 32- and 64-bit native code in the same APK.
 
 App Center today offers the ability to build and upload .apk files to Google Play Store. Users looking to start using bundles will not be able to upload them via App Center today.
    
