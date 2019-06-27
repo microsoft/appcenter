@@ -22,8 +22,6 @@ Given that users are looking to utilize Android App bundles, they can use App Ce
 * App Center will offer a new selector in the Android build configuration: "Also Build an Android Bundle".
 This will be pre-selected if the module selected in the configuration screen contains a "bundle {...}" block.
 
-* If a bundle will be built, the build will have the "android-app-bundle" tag after it is finished.
-
 * After the build is complete, the bundle will be available as a separate downloadable artifact named "android-app-bundle"
 
 * Signing the bundle
