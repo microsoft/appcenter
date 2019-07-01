@@ -122,6 +122,24 @@
     <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Auth, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Auth.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Auth.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Auth.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Auth.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Data, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Data.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Data.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Data.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Data.iOS.Bindings.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AppCenter.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
     </Reference>
@@ -235,24 +253,6 @@
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_v2">
       <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Analytics">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Auth">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Auth.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Auth.iOS.Bindings">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Auth.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Auth.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Data">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Data.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AppCenter.Data.iOS.Bindings">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Data.2.0.0-r0044-ee1a5a1\lib\Xamarin.iOS10\Microsoft.AppCenter.Data.iOS.Bindings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
