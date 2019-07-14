@@ -28,12 +28,35 @@ namespace Acquaint.XForms.UITest.Android
 				//.ApkFile ("../../../Android/bin/Debug/UITestsAndroid.apk")
 				//
 				// ^^^ THIS IS *NOT* THE WAY THE ACQUAINT APP IS SETUP FOR UITESTS ^^^
+                .ApkFile("C:/Code/app-acquaint/App/Acquaint.XForms/Acquaint.XForms.UITest/Acquaint.XForms.UITest.Android/com.xamarin.acquaintforms.apk")
 				.StartApp();
 		}
+
+        [Test]
+        public void LaunchTest()
+        {
+            Thread.Sleep(3000);
+            app.Screenshot("App Launched");
+            //app.Repl();
+        }
 
 		[Test]
 		public void UpdateFirstName()
 		{
+            Thread.Sleep(3000);
+            app.Screenshot("App Started");
+            app.Tap("Gray, Alvin");
+            app.Screenshot("Select Alvin");
+            app.Tap(x => x.Marked("Edit"));
+            app.Screenshot("Edit User Details");
+            app.Tap(x => x.Marked("Alvin"));
+            app.ClearText();
+            app.EnterText("Steven");
+            app.Screenshot("Update name to Steven");
+            app.Tap(x => x.Marked("Save"));
+            Thread.Sleep(3000);
+            app.Screenshot("Save Results");
+            /*
 			app.Screenshot("App Started");
 			app.EnterText(x => x.Class("EntryEditText"), "UseLocalDataSource");
 			app.Screenshot("Entered data parition phrase");
@@ -58,8 +81,10 @@ namespace Acquaint.XForms.UITest.Android
 			app.Screenshot("Saved changes, navigated to detail screen, first name updated");
 			app.Tap(x => x.Class("ImageButton"));
 			app.Screenshot("First name updated on list screen");
-		}
+            */
+        }
 
+        /*
 		[Test]
 		public void UpdateLastName()
 		{
@@ -243,6 +268,7 @@ namespace Acquaint.XForms.UITest.Android
 			Thread.Sleep(3000); // wait 3 seconds to give map time to fully render
 			app.Screenshot("Saved changes, navigated to detail screen, address updated");
 		}
-	}
+	    */
+    }
 }
 
