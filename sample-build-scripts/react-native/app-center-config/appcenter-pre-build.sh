@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 #
 # For Android/iOS apps, update the contents of the appcenter-config.json/ AppCenter-Config.plist file.
-# This can be used for an app that is open source, or to have a different configuration
-# for different branches.
-#
-# Suppose in our project exists two branches: master and develop.
-# We can release an app for production push notifications from the master branch
-# and a version of the app for test push notifications from the develop branch.
-# We just need configure this behaviour with environment variable in each branch :)
+# this is useful when having muliple variations for the app, and need to track each variation independently using dedicated app token which is provided by the ms app center.
 #
 # DECLARE THE APP_CENTER_TRACKING_JSON ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION, SET
 # TO THE CONTENTS OF YOUR appcenter-config.json FILE
