@@ -1,0 +1,12 @@
+# Configuration for the-welcome-bot - https://github.com/bash-bot/the-welcome-bot
+
+# Message for a new user who open an issue
+
+issueOpen: >
+  ## Welcome :wave:
+  
+  Thanks for your contribution! We use 👍 and 👎 reactions to gauge general interest in a feature request and help drive our priorities going forward.
+  
+  If you are new here it's recommended you review our [Planning Process](https://github.com/Microsoft/appcenter/wiki/Planning) to understand how we plan and prioritize work before reviewing our [Roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) and [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iteration-Plans).
+
+  For urgent issues, it's recommended you use the support feature in App Center to engage directly with our support and engineering team.
