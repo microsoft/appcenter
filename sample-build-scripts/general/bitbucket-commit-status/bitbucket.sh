@@ -10,6 +10,8 @@
 #
 # Contributed by: DrBeak1
 # https://bitbucket.org/DrBeak1/
+# Copyright 2019 Zume, Inc.
+# SPDX Identifier: MIT
 
 ORG=
 APP=
