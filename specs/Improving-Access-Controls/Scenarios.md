@@ -8,10 +8,11 @@ There are currently two categories of roles within App Center, Organization role
 
 ### Organization Roles
 
-There are two roles within an organization, which determine access across all apps and settings within an organization.
+There are three roles within an organization, which determine access across all apps and settings within an organization.
 
-* Admins manage the settings of an organization (name, permissions, billing configuration). They also automatically have 'Manager' level app permissions for all apps within the Org
-* Collaborators are able to create apps, making them the manager of that app, and create teams within an Organization. Collaborators only work within apps they own or are members of.
+* Admins manage the settings of an organization (name, permissions, billing configuration). They also automatically have 'Manager' level app permissions for all apps within the Org.
+* Collaborators are able to create apps, making them the manager of that app, and create teams within an Organization. Collaborators only work within apps they own or have been explicitly added to.
+* Members may not create or view Shared Distribution Groups or Teams. They also may only work within apps they have been explicitly added to.
 
 ### Team Roles
 
@@ -61,24 +62,24 @@ Custom roles will include the ability to include or exclude access to a specific
   2. Can view test run
   3. Can delete test run
   4. Can manage device sets
-  
+
 ### Distribution
 
   1. Can distribute release
   2. Can manage distribution groups
   3. Can delete release
   4. Can view distribution statistics
-  
+
 ### Diagnostics
 
   1. Can (re)-open, edit, close or delete issues
   1. Can view diagnostics
-  
+
 ### Analytics
 
   1. Can view analytics
   2. Can manage export
-  
+
 ### Push
 
   1. Can send push messages
@@ -89,7 +90,7 @@ Custom roles will include the ability to include or exclude access to a specific
   2. Can configure identity tenant
   3. Can delete identity tenant
   4. Can view user details
-  
+
 # GDPR
 
   1. Can submit DSR delete requests
