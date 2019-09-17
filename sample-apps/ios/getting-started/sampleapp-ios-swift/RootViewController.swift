@@ -43,14 +43,14 @@ class RootViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         if let scrollView = view.subviews.filter({ $0 is UIScrollView }).first,
             let pageControl = view.subviews.filter({ $0 is UIPageControl }).first {
             scrollView.frame = view.bounds
-            view.bringSubview(toFront: pageControl)
+            view.bringSubviewToFront(pageControl)
         }
     }
 
     // MARK: - UIPageViewController protocol functions
 
     func pageViewController(_: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        let index = services.index(of: viewController.restorationIdentifier!)
+        let index = services.firstIndex(of: viewController.restorationIdentifier!)
         if (index == 0) || (index == NSNotFound) {
             return nil
         } else {
@@ -60,7 +60,7 @@ class RootViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
     func pageViewController(_: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let index = services.index(of: viewController.restorationIdentifier!)
+        let index = services.firstIndex(of: viewController.restorationIdentifier!)
         if index! < services.count - 1 {
             return storyboard?.instantiateViewController(withIdentifier: services[index! + 1])
         } else {
