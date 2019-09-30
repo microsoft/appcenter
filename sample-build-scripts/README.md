@@ -19,6 +19,7 @@ This folder contains a collection of build scripts examples for the [App Center]
 ### React Native
 - [Run Detox](react-native/detox/)
 - [Change version name](react-native/version-name)
+- [Check current cocoapods version and podfile.lock](react-native/compare-cocoapods)
 
 ### Xamarin
 - [Run NUnit based tests](xamarin/nunit-test/)
