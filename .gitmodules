@@ -1,0 +1,15 @@
+[submodule "sample-apps/react-native/getting-started"]
+	path = sample-apps/react-native/getting-started
+	url = https://github.com/microsoft/appcenter-sampleapp-react-native.git
+[submodule "sample-apps/android/getting-started"]
+	path = sample-apps/android/getting-started
+	url = https://github.com/microsoft/appcenter-sampleapp-android.git
+[submodule "sample-apps/ios/getting-started"]
+	path = sample-apps/ios/getting-started
+	url = https://github.com/microsoft/appcenter-sampleapp-ios-swift.git
+[submodule "sample-apps/xamarin/getting-started"]
+	path = sample-apps/xamarin/getting-started
+	url = https://github.com/microsoft/appcenter-sampleapp-xamarin.git
+[submodule "sample-apps/macos/getting-started"]
+	path = sample-apps/macos/getting-started
+	url = https://github.com/microsoft/appcenter-sampleapp-macos-swift
