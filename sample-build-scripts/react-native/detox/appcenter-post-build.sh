@@ -18,7 +18,7 @@
 echo "Installing applesimutils..."
 mkdir simutils
 cd simutils
-curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
+curl -L https://github.com/wix/AppleSimulatorUtils/archive/0.7.2.tar.gz -o applesimutils.tar.gz
 tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh .
 cd ..
