@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bugs and support requests
+    url: https://appcenter.ms
+    about: Please report bugs and support requests using the blue bubble in the lower-right corner of the App Center UI.
