@@ -10,7 +10,7 @@ find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
 #echo "Running UI test in App Center Test:"
 echo "What is in the output directory"
 ls $APPCENTER_OUTPUT_DIRECTORY
-echo "What is in the source directory"
-APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.ipa
+echo "Running test in App Center Test"
+APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.apk
 BUILDDIR=$APPCENTER_SOURCE_DIRECTORY/*.UITest/bin/Debug/
 appcenter test run uitest --app $APP_OWNER --devices $DEVICE_SET --test-series "$APPCENTER_BRANCH-$APPCENTER_TRIGGER" --locale $LOCALE --app-path $APPPATH --build-dir $BUILDDIR --async --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools --token $APPCENTER_TOKEN
