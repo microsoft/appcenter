@@ -16,6 +16,10 @@ set -e
 #
 # LOCALE
 # UTF-8 locale like en_US for english American
+#
+# If you're having trouble setting valid values for DEVICE_SET, APP_OWNER & LOCALE,
+# you can generate a prototype command line to help: 
+# https://docs.microsoft.com/en-us/appcenter/test-cloud/starting-a-test-run#new-test-run
 ##
 
 
