@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 echo "Found UI tests projects:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '*.UITest.*\.csproj' -exec echo {} \;
@@ -7,10 +8,17 @@ echo "Building UI test projects:"
 find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj' -exec msbuild {} \;
 echo "Compiled projects to run UI tests:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
-#echo "Running UI test in App Center Test:"
-echo "What is in the output directory"
+if [ -d $APPCENTER_OUTPUT_DIRECTORY]
+then
+	echo "App Center output directory exists"
+else
+	echo " App Center output directory does not exists"
+	exit 9999
+fi
+
 ls $APPCENTER_OUTPUT_DIRECTORY
 echo "What is in the source directory"
 APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.ipa
 BUILDDIR=$APPCENTER_SOURCE_DIRECTORY/*.UITest/bin/Debug/
-appcenter test run uitest --app $APP_OWNER --devices $DEVICE_SET --test-series "$APPCENTER_BRANCH-$APPCENTER_TRIGGER" --locale $LOCALE --app-path $APPPATH --build-dir $BUILDDIR --async --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools --token $APPCENTER_TOKEN
+UITESTTOOL=$APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools
+appcenter test run uitest --app $APP_OWNER --devices $DEVICE_SET --test-series "$APPCENTER_BRANCH-$APPCENTER_TRIGGER" --locale $LOCALE --app-path $APPPATH --build-dir $BUILDDIR --async --uitest-tools-dir $UITESTTOOL --token $APPCENTER_TOKEN
