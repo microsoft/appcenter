@@ -18,23 +18,18 @@ set -e
 # UTF-8 locale like en_US for english American
 ##
 
-echo "Found UI tests projects:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '*.UITest.*\.csproj' -exec echo {} \;
-echo
-echo "Building UI test projects:"
-find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj' -exec msbuild {} \;
-echo "Compiled projects to run UI tests:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
-if [ -d $APPCENTER_OUTPUT_DIRECTORY]
+
+if find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj';
 then
-	echo "App Center output directory exists"
+	echo "Building UI test projects:"
+	find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj' -exec msbuild {} \;
 else
-	echo " App Center output directory does not exists"
+	echo "Can't find UI test project"
 	exit 9999
 fi
-
-ls $APPCENTER_OUTPUT_DIRECTORY
-echo "What is in the source directory"
+echo "Compiled projects to run UI tests:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
+echo "Running test in App Center Test"
 APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.ipa
 BUILDDIR=$APPCENTER_SOURCE_DIRECTORY/*.UITest/bin/Debug/
 UITESTTOOL=$APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools

@@ -19,20 +19,16 @@ set -e
 ##
 
 
-echo "Found UI tests projects:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '*.UITest.*\.csproj' -exec echo {} \;
-echo
-echo "Building UI test projects:"
-find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj' -exec msbuild {} \;
-echo "Compiled projects to run UI tests:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
-if [ -d $APPCENTER_OUTPUT_DIRECTORY]
+if find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj';
 then
-	echo "App Center output directory exists"
+	echo "Building UI test projects:"
+	find $APPCENTER_SOURCE_DIRECTORY -name '*.UITest.csproj' -exec msbuild {} \;
 else
-	echo " App Center output directory does not exists"
+	echo "Can't find UI test project"
 	exit 9999
 fi
+echo "Compiled projects to run UI tests:"
+find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
 echo "Running test in App Center Test"
 APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.apk
 BUILDDIR=$APPCENTER_SOURCE_DIRECTORY/*.UITest/bin/Debug/
