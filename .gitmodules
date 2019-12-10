@@ -16,3 +16,6 @@
 [submodule "sample-apps/macos/getting-started"]
 	path = sample-apps/macos/getting-started
 	url = https://github.com/microsoft/appcenter-sampleapp-macos-swift
+[submodule "appcenter-Xamarin.UITest-Demo"]
+	path = appcenter-Xamarin.UITest-Demo
+	url = https://github.com/microsoft/appcenter-Xamarin.UITest-Demo
