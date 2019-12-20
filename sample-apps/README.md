@@ -6,11 +6,11 @@ This directory contains Git - Submodule references to the App Center Samples we 
 
 Simply click on the directories of any of the samples we have to be redirected over to the corresponding Git Repository for them:
 
-- [Android Java Sample](android/getting-started)
-- [iOS Swift Sample](ios/getting-started)
-- [macOS Swift Sample](macos/getting-started)
-- [React Native Sample](react-native/getting-started)
-- [Xamarin Sample](xamarin/getting-started)
+- [Android Java Sample](https://github.com/microsoft/appcenter-sampleapp-android)
+- [iOS Swift Sample](https://github.com/microsoft/appcenter-sampleapp-ios-swift)
+- [macOS Swift Sample](https://github.com/microsoft/appcenter-sampleapp-macos-swift)
+- [React Native Sample](https://github.com/microsoft/appcenter-sampleapp-react-native)
+- [Xamarin Sample](https://github.com/microsoft/appcenter-sampleapp-xamarin)
 
 ## Viewing after git clone
 
