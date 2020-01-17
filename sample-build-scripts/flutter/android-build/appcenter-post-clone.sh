@@ -24,7 +24,7 @@ flutter build apk --release
 #flutter build appbundle
 
 # copy the APK where AppCenter will find it
-mkdir -p android/app/build/outputs/apk/; mv build/app/outputs/apk/release/app-release.apk $_
+mkdir -p android/app/app/build/outputs/apk/; mv build/app/outputs/apk/release/app-release.apk $_
 
 # copy the AAB where AppCenter will find it
-#mkdir -p android/app/build/outputs/bundle/; mv build/app/outputs/bundle/release/app.aab $_
+#mkdir -p android/app/app/build/outputs/bundle/; mv build/app/outputs/bundle/release/app.aab $_
