@@ -1,5 +1,5 @@
 #!/bin/bash
-# Customize this script to download build data you have permission to access locally. 
+# Customize this script to download build data you have permission to access in App Center. 
 
 TEAM_APP='ORG_NAME/APP_NAME'
 
