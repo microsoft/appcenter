@@ -12,6 +12,9 @@ This folder contains a collection of build scripts examples for the [App Center]
 - [Change google-services.json](general/android/google-services/)
 - [Rollback CocoaPods to 1.5.3](general/cocoapods-rollback)
 
+### Android
+- [Change version code](android/version-code/appcenter-pre-build.sh)
+
 ### iOS
 - [Use App Center pre-release SDK](ios/appcenter-beta-sdk/)
 - [Use the same CocoaPods version as the Pod lockfile](ios/match-cocoapods-version-to-lockfile/appcenter-post-clone.sh)
