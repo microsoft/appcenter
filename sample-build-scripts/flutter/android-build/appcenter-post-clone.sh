@@ -18,7 +18,7 @@ flutter doctor
 echo "Installed flutter to `pwd`/flutter"
 
 # build APK
-# if you get "Execution failed for task ':app:lintVitalRelease'." error uncomment next two lines
+# if you get "Execution failed for task ':app:lintVitalRelease'." error, uncomment next two lines
 # flutter build apk --debug
 # flutter build apk --profile
 flutter build apk --release
