@@ -16,3 +16,6 @@
 [submodule "sample-apps/xamarin/appcenter-Xamarin.UITest-Demo"]
 	path = sample-apps/xamarin/appcenter-Xamarin.UITest-Demo
 	url = https://github.com/microsoft/appcenter-Xamarin.UITest-Demo
+[submodule "sample-apps/xamarin/Xamarin.Forms-Gallery"]
+	path = sample-apps/xamarin/Xamarin.Forms-Gallery
+	url = https://github.com/microsoft/appcenter-Xamarin.Forms-Gallery-Demo
