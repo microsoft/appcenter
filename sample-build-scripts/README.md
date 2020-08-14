@@ -1,4 +1,5 @@
 # App Center Build Scripts Examples
+**WARNING** - Build scripts allow you to add custom functionality beyond the normal scope of product support. They are provided as-is and may be sufficient for your use case; but you might also encounter limitations that aren't directly addressable by App Center support.
 
 This folder contains a collection of build scripts examples for the [App Center](https://appcenter.ms) Build service. Build scripts are a powerful way to control the build process on App Center at three pre-defined stages. More details about the usage of build scripts on App Center can be found in the [documentation](https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/). Feel free to use and modify the scripts as you need them.
 
