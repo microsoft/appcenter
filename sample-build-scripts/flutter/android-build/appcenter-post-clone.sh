@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 #Place this script in project/android/app/
 
-cd ..
+#!/usr/bin/env bash
+set -ex
 
-# fail if any command fails
-set -e
-# debug log
-set -x
+PROJECT_DIR=$(dirname $(dirname $(pwd)))
 
-cd ..
-git clone -b beta https://github.com/flutter/flutter.git
+mkdir ~/dev && cd $_
+
+git clone -b stable https://github.com/flutter/flutter.git
 export PATH=`pwd`/flutter/bin:$PATH
 
-flutter channel stable
+flutter channel stable && flutter upgrade
 flutter doctor
 
 echo "Installed flutter to `pwd`/flutter"
+
+# Go to project directory
+cd $PROJECT_DIR
 
 # build APK
 # if you get "Execution failed for task ':app:lintVitalRelease'." error, uncomment next two lines
