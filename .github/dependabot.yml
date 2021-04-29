@@ -1,0 +1,9 @@
+version: 2
+updates:
+- package-ecosystem: gitsubmodule
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  reviewers:
+  - King-of-Spades
