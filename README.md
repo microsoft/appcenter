@@ -16,9 +16,8 @@ Welcome to the primary repository for [Visual Studio App Center](https://appcent
 3. [Iteration Plans](https://github.com/Microsoft/appcenter/wiki/Iteration-plans)
 
 Over the past few years our team’s focus has been to deliver a first class DevOps experience for mobile and desktop developers. A substantial part of this journey involved building the next generation of HockeyApp services for our customers. Earlier this year, we completed the HockeyApp shut down. We are now looking at what's next for the App Center service. 
-Just like any software engineering team, as we focused on building and scaling App Center, we accumulated technical debt that can no longer be sustained. 
 
-Therefore, as we look to what is next, the App Center team will prioritize improving reliability and performance for the service through mid-2021. This means new feature work will be significantly reduced. Switching focus to reliability and performance wasn’t an easy decision, but nevertheless an important one.
+Just like any software engineering team, as we focused on building and scaling App Center, we accumulated technical debt that can no longer be sustained. Therefore, as we look to what is next, the App Center team will prioritize improving reliability and performance for the service. This means new feature work will be significantly reduced. Switching focus to reliability and performance wasn’t an easy decision, but nevertheless an important one.
 
 We appreciate all the time and efforts that were put into adding and voting for new features in our GitHub repo. We will continue to monitor your feature requests during this period, but will not be able to commit to a timeframe for addressing them. The following will continue to be true and a priority for the team:
 * Customers can continue building, testing, deploying and monitoring their apps.
