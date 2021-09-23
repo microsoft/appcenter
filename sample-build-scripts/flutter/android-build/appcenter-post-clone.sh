@@ -9,6 +9,7 @@ set -e
 set -x
 
 cd ..
+chmod a+rx android/gradlew
 git clone -b beta https://github.com/flutter/flutter.git
 export PATH=`pwd`/flutter/bin:$PATH
 
