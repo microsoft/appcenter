@@ -14,4 +14,3 @@ if [ "$AGENT_JOBSTATUS" != "Succeeded" ]; then
 else
     github_set_status_success
 fi
-
