@@ -31,4 +31,3 @@ then
     echo "File content:"
     cat $GOOGLE_SERVICES_JSON_FILE
 fi
-

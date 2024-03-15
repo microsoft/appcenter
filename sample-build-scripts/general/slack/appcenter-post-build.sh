@@ -54,4 +54,3 @@ if [ "$AGENT_JOBSTATUS" != "Succeeded" ]; then
     slack_notify_build_failed
     exit 0
 fi
-

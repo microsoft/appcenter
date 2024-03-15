@@ -38,4 +38,3 @@ github_set_status_success() {
 github_set_status_fail() {
     github_set_status status="failure" job_status="$AGENT_JOBSTATUS"
 }
-
