@@ -32,7 +32,7 @@ else
 	exit 9999
 fi
 echo "Compiled projects to run UI tests:"
-find $APPCENTER_SOURCE_DIRECTORY -regex '*.bin.*UITest.*\.dll' -exec echo {} \;
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UITest.*\.dll' -exec echo {} \;
 echo "Running test in App Center Test"
 APPPATH=$APPCENTER_OUTPUT_DIRECTORY/*.ipa
 BUILDDIR=$APPCENTER_SOURCE_DIRECTORY/*.UITest/bin/Debug/
